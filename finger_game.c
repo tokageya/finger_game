@@ -104,11 +104,12 @@
 #define devide_s2 8 // 行動インデックス8. 自分の小さい指が2になるように分割する
 #define devide_s3 9 // 行動インデックス9. 自分の小さい指が3になるように分割する
 
+#define ACTIOIN_CHOICES 10 // 行動インデックスの総数
 #define MAX_LOG 200 // ボードの履歴を格納する数
 
 /*勝敗判定で使う judge 構造体を作成*/
 typedef struct Judge_{
-  unsigned int goal_difference;
+  unsigned int goalpoints_difference;
   unsigned int play_first;
   unsigned int draw_first;
 } judge;
@@ -133,7 +134,7 @@ int main(void){
     copy_genome(parents,children);
 
     /*それぞれの個体を評価する*/
-    evaluate_select_genome(parents,opponent,evaluations);
+    evaluate_genome(parents,opponent,evaluations);
 
     /*現行世代(親)個体から評価規準に基づいて交叉させて、次世代(子)個体を生成する*/
     generate_genome(parents,children,evaluations);
@@ -209,6 +210,16 @@ unsigned int opponent_big_finger(unsigned int board_hash){
   else if(index == 2 || index == 6 || index == 9) return 2;
   else if(index == 3 || index == 7 || index == 10 || index == 12) return 3;
   else return 4;
+}
+
+/*自分と相手それぞれの手の情報から盤面ハッシュを返す(復号化)*/
+unsigned int decoding_board_hash(unsigned int player1_r,unsigned int player1_l, unsigned int player2_r, unsigned int player2_l){
+  unsigned int player1_s,player1_b,player2_s,player2_b;
+  if(player1_r < player1_l){ player1_s = player1_r; player1_b = player1_l;}
+  else{ player1_s = player1_l; player1_b = player1_r;}
+  if(player2_r < player2_l){ player2_s = player2_r; player2_b = player2_l;}
+  else{ player2_s = player2_l; player2_b = player2_r;}
+  return ( ( 15 * ( ((player1_s * ( 9 - player1_s )) / 2)  + player1_b) ) + ( ((player2_s * ( 9 - player2_s )) / 2)  + player2_b) );
 }
 
 /*引数の配列の末尾に要素を追加する*/
@@ -312,7 +323,7 @@ unsigned int random_action_by_board(unsigned int board){
   if(my_index < 5 || opponent_index < 5) return 0;
   
   /*ローカルの行動インデックス配列を作成する*/
-  unsigned int action_arr[10];
+  unsigned int action_arr[ACTIOIN_CHOICES];
   action_arr[0] = 1;
   unsigned int action_arr_len= 1;
 
@@ -341,20 +352,55 @@ void copy_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int chi
   return;
 }
 
-
-
-
-
-
 /*盤面ハッシュを一時的に相手視点に変えるための関数*/
 unsigned int reverse_board(unsigned int board){
   board2 = (opponent_hands_index(board) * 15) + my_hands_index(board);
   return board2;
 }
 
-/*引数の盤面ハッシュに対応する盤面から、引数の行動インデックスに対応する行動をとると遷移する次の盤面を返す(未完成)*/
+/*引数の盤面ハッシュに対応する盤面から、引数の行動インデックスに対応する行動をとると遷移する次の盤面を返す*/
 unsigned int next_board(unsigned int now_board, unsigned int action){
+  player1_s = my_small_finger(now_board);
+  player1_b = my_big_finger(now_board);
+  player2_s = opponent_small_finger(now_board);
+  player2_b = opponent_big_finger(now_board);
+  unsigned int board = now_board;
+  /*行動インデックス毎に場合分け*/
+  if(action == 1){
+    player2_b += player1_b;
+  }
+  else if(action == 2){
+    player2_s += player1_b;
+  }
+  else if(action == 3){
+    player2_b += player1_s;
+  }
+  else if(action == 4){
+    player2_s += player1_s;
+  }
+  else if(action == 5){
+    player1_b += player1_s;
+  }
+  else if(action == 6){
+    player1_s += player1_b;
+  }
+  else if(action == 7){
+    unsigned int sum = player1_b + player1_s;
+    player1_s = 1;
+    player1_b = sum-1;
+  }
+  else if(action == 8){
+    unsigned int sum = player1_b + player1_s;
+    player1_s = 2;
+    player1_b = sum-2;
+  }
+  else if(action == 9){
+    unsigned int sum = player1_b + player1_s;
+    player1_s = 3;
+    player1_b = sum-3;
+  }
 
+  return decoding_board_hash(player1_s,player1_b,player2_s,player2_b);
 }
 
 /*引数の盤面のログからループしていないかどうかを確認する*/
@@ -369,8 +415,7 @@ unsigned int loop_check(unsigned int board_log_len, unsigned int* board_log){
   return 0;
 }
 
-/*引数で得た二つの個体を先攻,後攻の両方で戦わせて、それぞれの結果からplayer1の評価を judge 変数に格納して返す(next_board関数ができれば完成)*/
-// action_list 関数も使用する(かも)
+/*引数で得た二つの個体を先攻,後攻の両方で戦わせて、それぞれの結果からplayer1の評価を judge 変数に格納して返す*/
 judge battle(unsigned int player1[BOARD_NUM], unsigned int player2[BOARD_NUM]){
   judge j = {0,0,0};
 
@@ -404,7 +449,7 @@ judge battle(unsigned int player1[BOARD_NUM], unsigned int player2[BOARD_NUM]){
   else{
     j.play_first = 0;
   }
-  j.goal_difference += j.play_first;
+  j.goalpoints_difference += j.play_first;
 
   board = 80; // 盤面を初期化
   turn_num = 0; // ターン数を初期化
@@ -436,14 +481,14 @@ judge battle(unsigned int player1[BOARD_NUM], unsigned int player2[BOARD_NUM]){
   else{
     j.draw_first = 0;
   }
-  j.goal_difference += j.draw_first;
+  j.goalpoints_difference += j.draw_first;
 
 
   return j;
 }
 
-/*現行世代(親)の情報をもとに敵の情報から評価する(battle関数ができれば完成)*/
-void evaluate_select_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM], unsigned int opponent[BOARD_NUM],judge evaluations[GENOME_LENGTH]){
+/*現行世代(親)の情報をもとに敵の情報から評価する*/
+void evaluate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM], unsigned int opponent[BOARD_NUM],judge evaluations[GENOME_LENGTH]){
   /*それぞれの個体を戦わせて、評価を evalutions 配列の添え字が対応する場所に入れる*/
   for(int gen = 0; gen < GENOME_LENGTH; gen++){
     evaluations[ gen ] = battle( parents[ gen ] , opponent[ gen ] );
@@ -455,11 +500,15 @@ void evaluate_select_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM], unsi
 
 
 
-
 /*現行世代(親)の情報をもとに次世代(子)に交叉して遺伝させる(未完成)*/
 void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int children[GENOME_LENGTH][BOARD_NUM],judge evaluations[GENOME_LENGTH]){
   return;
 }
+
+
+
+
+
 
 /*遺伝子を一部突然変異させる(未完成)*/
 void mutate_genome(unsigned int children[GENOME_LENGTH][BOARD_NUM]){
