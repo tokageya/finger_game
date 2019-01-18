@@ -8,9 +8,9 @@
 4. 自分の小さい指で相手の小さい指を攻撃する
 5. 自分の大きい指で自分の小さい指を攻撃する
 6. 自分の小さい指で自分の大きい指を攻撃する
-7. 自分の小さい指が1になるように攻撃する((自分の片方の指 0 && 自分のもう片方の指が 2 以上のとき) or (自分の指が両方とも 2 以上 && 自分の両方の指の合計が 5 以下のとき))
-8. 自分の小さい指が2になるように攻撃する(??????Е???w??0, ???Е???w??4??????)
-9. 自分の小さい指が3になるように攻撃する
+7. 自分の小さい指が1になるように分割する((自分の片方の指 0 && 自分のもう片方の指が 2 以上のとき) or (自分の指が両方とも 2 以上 && 自分の両方の指の合計が 5 以下のとき))
+8. 自分の小さい指が2になるように分割する(0, ???Е???w??4??????)
+9. 自分の小さい指が3になるように分割する
 */
 //※両手のそれぞれの指の値が同じ場合はそれぞれの対象を大きい指の値として行動インデックスを捉える
 /*---------------------------------------------*/
@@ -100,21 +100,21 @@
 #define attack_b_to_my_s 5 // 行動インデックス5. 自分の大きい指で自分の小さい指を攻撃する
 #define attack_s_to_my_b 6 // 行動インデックス6. 自分の小さい指で自分の大きい指を攻撃する
 
-#define devide_s1 7 // 行動インデックス7. 自分の小さい指が1になるように攻撃する
-#define devide_s2 8 // 行動インデックス8. 自分の小さい指が2になるように攻撃する
-#define devide_s3 9 // 行動インデックス9. 自分の小さい指が3になるように攻撃する
+#define devide_s1 7 // 行動インデックス7. 自分の小さい指が1になるように分割する
+#define devide_s2 8 // 行動インデックス8. 自分の小さい指が2になるように分割する
+#define devide_s3 9 // 行動インデックス9. 自分の小さい指が3になるように分割する
 
 int main(void){
-  unsigned int parents[GENOME_LENGTH][BOARD_NUM]; // (GENOME_LENGTH)個の親個体
-  unsigned int children[GENOME_LENGTH][BOARD_NUM]; // (GENOME_LENGTH)個の子供個体
-  int evaluations[GENOME_LENGTH]; // 現行世代に対応したそれぞれの評価値を登録
+  unsigned int parents[GENOME_LENGTH][BOARD_NUM]; // (GENOME_LENGTH)個の現行世代(親)個体
+  unsigned int children[GENOME_LENGTH][BOARD_NUM]; // (GENOME_LENGTH)個の次世代(子)個体
+  int evaluations[GENOME_LENGTH]; // 現行世代(親)に対応したそれぞれの評価値を登録
   unsigned int opponent[BOARD_NUM]; // 対戦相手のボード情報
   
   unsigned int action_arr[10]; // 盤面に対して打てる行動を入れた行動インデックス配列
   action_arr[0] = 1; // 自分の大きい指で相手の大きい指を攻撃する行動インデックス 1 を入れる
   unsigned int action_arr_len = 1; // 行動インデックス配列の長さ
 
-  /* (GENOME_LENGTH)個の現行遺伝子個体をランダムに生成 */
+  /* (GENOME_LENGTH)個の現行世代の遺伝子個体をランダムに生成 */
   for(unsigned int gen = 0; gen < GENOME_LENGTH; gen ++){
     init_genome_random(children[gen]);
   }
@@ -124,19 +124,19 @@ int main(void){
 
   /*世代数分loopする*/
   for(unsigned int generation = 1; generation <= GENERATIONS_NUMBER; generation++){
-    /*childrenの値をparentsにコピー*/
+    /*childrenの値をparents(現行世代)にコピー*/
     copy_genome(parents,children);
 
     /*それぞれの個体を評価して、個体を選択する*/
     evaluate_select_genome(parents,opponent,evaluations);
 
-    /*親個体から交叉させて、子供個体を生成する*/
+    /*現行世代(親)個体から交叉させて、次世代(子)個体を生成する*/
     generate_genome(parents,children);
 
-    /*子供を突然変異させる*/
+    /*次世代(子)を突然変異させる*/
     mutate_genome(children);
 
-    /*遺伝子情報を出力する*/
+    /*次世代(子)遺伝子情報を出力する*/
     printf("=========generation:%d==========\n",generation);
     print_genome(children);
     printf("================================\n");
@@ -257,7 +257,7 @@ void action_list(unsigned int board, unsigned int* arr_len , unsigned int* actio
   }
 
   /* ((自分の片方の指 0 && 自分のもう片方の指が 2 以上) or (自分の指が両方とも 2 以上 && 自分の両方の指の合計が 5 以下))のとき
-   * 自分の小さい指が1になるように攻撃する行動インデックス 7 を行動インデックス配列に入れる */
+   * 自分の小さい指が1になるように分割する行動インデックス 7 を行動インデックス配列に入れる */
   if( (my_index >= 2 && my_index <= 4) || (my_index) )
     add_elem(devide_s1,arr_len,action_arr);
 
@@ -265,7 +265,7 @@ void action_list(unsigned int board, unsigned int* arr_len , unsigned int* actio
   
 }
 
-/*盤面に対し、ランダムな行動を返す(action_list配列ができれば完成)*/
+/*盤面に対し、ランダムな行動を返す(action_list関数ができれば完成)*/
 unsigned int random_action_by_board(unsigned int board){
   unsigned int my_index = my_hands_index(board);//自分の両手の情報を入れる
   unsigned int opponent_index = opponent_hands_index(board);//相手の両手の情報を入れる
@@ -288,7 +288,7 @@ unsigned int random_action_by_board(unsigned int board){
 
 
 
-/*一つの遺伝子にそれぞれの盤面に対しての行動をランダムに入れる(random_actioin_by_boardができれば完成)*/
+/*一つの遺伝子にそれぞれの盤面に対しての行動をランダムに入れる(random_actioin_by_board関数ができれば完成)*/
 void init_genome_random(unsigned int* genome){
   for(unsigned int board = 0; board < BOARD_NUM; board ++){
     genome[ board ] = random_action_by_board( board );
