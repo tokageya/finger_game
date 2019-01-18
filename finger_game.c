@@ -8,7 +8,7 @@
 4. 自分の小さい指で相手の小さい指を攻撃する
 5. 自分の大きい指で自分の小さい指を攻撃する
 6. 自分の小さい指で自分の大きい指を攻撃する
-7. 自分の小さい指が1になるように分割する((自分の片方の指 0 && 自分のもう片方の指が 2 以上のとき) or (自分の指が両方とも 2 以上 && 自分の両方の指の合計が 5 以下のとき))
+7. 自分の小さい指が1になるように分割する
 8. 自分の小さい指が2になるように分割する
 9. 自分の小さい指が3になるように分割する
 */
@@ -325,8 +325,13 @@ void init_genome_random(unsigned int* genome){
   return;
 }
 
-/*次世代(子供)のそれぞれの遺伝子情報を現行世代(親)にコピーする(未完成)*/
+/*次世代(子供)のそれぞれの遺伝子情報を現行世代(親)にコピーする*/
 void copy_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int children[GENOME_LENGTH][BOARD_NUM]){
+  for(int gen = 0; gen < GENOME_LENGTH; gen++){
+    for(int board; board < BOARD_NUM; board++){
+      parents[gen][board] = children[gen][board];
+    }
+  }
   return;
 }
 
