@@ -73,10 +73,11 @@
 */
 
 // 選択方法 //
-// とりあえずエリート選択
+/* とりあえずエリート選択
+ * 今回で言えばエリート遺伝子を上から20体, エリート遺伝子を交叉させて生み出した子孫40体, エリート以外の現行遺伝子40体の計100体とする */
 
 // 交叉方法 //
-// とりあえず一様交叉
+// とりあえず二点交叉
 
 // 突然変異方法 //
 //とりあえず個体突然変異率1%, 遺伝子突然変異率1%
@@ -106,6 +107,10 @@
 
 #define ACTIOIN_CHOICES 10 // 行動インデックスの総数
 #define MAX_LOG 200 // ボードの履歴を格納する数
+#define ELITE_GENOME_NUM 20 // 次世代に残す現行のエリート遺伝子の数
+#define ELITE_PROGENCY_GENOME_NUM 40 // 交叉させて生み出す次世代の遺伝子の数
+#define OTHER_GENOME_NUM 40 // 次世代に残すその他の遺伝子
+
 
 /*勝敗判定で使う judge 構造体を作成*/
 typedef struct Judge_{
@@ -491,17 +496,152 @@ judge battle(unsigned int player1[BOARD_NUM], unsigned int player2[BOARD_NUM]){
 void evaluate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM], unsigned int opponent[BOARD_NUM],judge evaluations[GENOME_LENGTH]){
   /*それぞれの個体を戦わせて、評価を evalutions 配列の添え字が対応する場所に入れる*/
   for(int gen = 0; gen < GENOME_LENGTH; gen++){
-    evaluations[ gen ] = battle( parents[ gen ] , opponent[ gen ] );
+    evaluations[ gen ] = battle( parents[ gen ] , opponent);
   }
   return;
 }
 
+/*引数の配列について、添え字の要素を削除して配列を更新する*/ //使わないかも
+void delete_arr_elem(unsigned int position, unsigned int *arr_len, unsigned int *arr){
+  for(int i = 0; i < position; i ++)arr++;
+  for(int i = position; i < ((*arr_len)-1); i++)arr[i] = arr[i + 1];
+  (*arr_len)--;
+  return;
+}
 
+/*引数の2つの遺伝子について、配列のある2つポジションで交叉させて更新する*/
+void cross_over(unsigned int parent_1[BOARD_NUM], unsigned int parent_2[BOARD_NUM], unsigned int cross_1, unsigned int cross_2, unsigned int child[BOARD_NUM] ){
+  unsigned int cross_s, cross_b;
+  if(cross_1 < cross_2){
+    cross_s = cross_1;
+    cross_b = cross_2;
+  }
+  else{
+    cross_s = cross_2;
+    cross_b = cross_1;
+  }
 
+  for(unsigned int i = 0; i < cross_s; i++){
+    child[i] = parent_1[i];
+  }
+  for(unsigned int i = cross_s; i < cross_b; i++){
+    child[i] = parent_2[i];
+  }
+  for(unsigned int i = cross_b; i < BOARD_NUM; i++){
+    child[i] = parent_1[i];
+  }
+}
 
+/*現行世代(親)の情報をもとに次世代(子)に交叉して遺伝させる*/
+void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int children[GENOME_LENGTH][BOARD_NUM], judge evaluations[GENOME_LENGTH]){
+  /*現行世代で良い結果を持っている親を捜す*/
+  unsigned int elite_arr[GENOME_LENGTH][BOARD_NUM] = {};
+  unsigned int elite_arr_len = 0;
+  unsigned int elite_situ = 6;//エリート個体のうち、一番評価が低い個体を示す
+  
+  /*エリート選択1. 先攻, 後攻ともに勝利した個体を探し、エリート配列に入れる*/
+  for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
+    if(evaluations[gen].goalpoints_difference == 6){
+      for(int i = 0; i < BOARD_NUM; i++){
+        elite_arr[elite_arr_len][i] = parents[gen][i];
+      }
+      elite_arr_len ++;    
+    }
+  }
 
-/*現行世代(親)の情報をもとに次世代(子)に交叉して遺伝させる(未完成)*/
-void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int children[GENOME_LENGTH][BOARD_NUM],judge evaluations[GENOME_LENGTH]){
+  //エリート選択1でエリートの個体数が足りない場合、
+  /*エリート選択2. 先攻, 後攻どちらかで勝利し、どちらかで引き分けた個体を探し、エリート配列に入れる*/
+  if(elite_arr_len < ELITE_GENOME_NUM){
+    elite_situ = 4;
+    for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
+      if(evaluations[gen].goalpoints_difference == 4){
+        for(int i = 0; i < BOARD_NUM; i++){
+          elite_arr[elite_arr_len][i] = parents[gen][i];
+        }
+        elite_arr_len ++;
+      }
+    }
+  }
+
+  //エリート選択2でエリートの個体数が足りない場合、
+  /*エリート選択3. 先攻, 後攻どちらも引き分けた個体を探し、エリート配列に入れる*/
+  if(elite_arr_len < ELITE_GENOME_NUM){
+    elite_situ = 2;
+    for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
+      if(evaluations[gen].goalpoints_difference == 2){
+        for(int i = 0; i < BOARD_NUM; i++){
+          elite_arr[elite_arr_len][i] = parents[gen][i];
+        }
+        elite_arr_len ++;
+      }
+    }
+  }
+
+  //エリート選択3でエリートの個体数が足りない場合、
+  /*エリート選択4. 先攻, 後攻どちらかで引き分け、どちらかで負けた個体を探し、エリート配列に入れる*/
+  if(elite_arr_len < ELITE_GENOME_NUM){
+    elite_situ = 1;
+    for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
+      if(evaluations[gen].goalpoints_difference == 1){
+        for(int i = 0; i < BOARD_NUM; i++){
+          elite_arr[elite_arr_len][i] = parents[gen][i];
+        }
+        elite_arr_len ++;
+      }
+    }
+  }
+
+  //エリート選択4でエリートの個体数が足りない場合、
+  /*エリート選択5. 先攻, 後攻どちらも負けた個体を探し、エリート配列に入れる*/
+  if(elite_arr_len < ELITE_GENOME_NUM){
+    elite_situ = 0;
+    for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
+      if(evaluations[gen].goalpoints_difference == 0){
+        for(int i = 0; i < BOARD_NUM; i++){
+          elite_arr[elite_arr_len][i] = parents[gen][i];
+        }
+        elite_arr_len ++;
+      }
+    }
+  }
+
+  /*エリート個体のうち、(ELITE_GENOME_NUM)体を次世代に入れる*/
+  for(int eli_gen = 0; eli_gen < ELITE_GENOME_NUM; eli_gen++){
+    for(int board = 0; board < BOARD_NUM; board++){
+      children[eli_gen][board] = elite_arr[eli_gen][board];
+    }
+  }
+
+  /*エリート個体を適当に選び二点交叉させ、(ELITE_PROGENCY_NUM)体を次世代に残す*/
+  unsigned int gen1, gen2;
+  unsigned int cross_1, cross_2;
+  for(unsigned int n_gen = ELITE_GENOME_NUM; n_gen < (ELITE_GENOME_NUM + ELITE_PROGENCY_GENOME_NUM); n_gen++){
+    /*エリート個体からランダムに二つ選択する*/
+    gen1 = rand() % elite_arr_len;
+    gen2 = rand() % elite_arr_len;
+    while(gen1 == gen2){
+      gen1 = rand() % elite_arr_len;
+      gen2 = rand() % elite_arr_len;
+    }
+    /*選んだ2体のエリート個体を二点交叉させる*/
+    cross_1 = rand() % BOARD_NUM;
+    cross_2 = rand() % BOARD_NUM;
+    while(cross_1 == cross_2){
+      cross_1 = rand() % BOARD_NUM;
+      cross_2 = rand() % BOARD_NUM;
+    }
+    cross_over(elite_arr[gen1], elite_arr[gen2], cross_1, cross_2, children[ n_gen ]);
+  }
+  
+  /*エリート以外の現行遺伝子をランダムに入れる*/
+  for(unsigned int now_gen = ( ELITE_PROGENCY_GENOME_NUM + ELITE_GENOME_NUM ); now_gen < GENOME_LENGTH; now_gen ++){
+    if(evaluations[now_gen].goalpoints_difference <= elite_situ){
+      for(int board = 0; board < BOARD_NUM; board++){
+        children[now_gen][board] = parents[now_gen][board];
+      }
+    }
+  }
+
   return;
 }
 
