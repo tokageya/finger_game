@@ -277,7 +277,7 @@ unsigned int random_action_by_board(unsigned int board){
 
 
   /*盤面が存在しない(試合が終了している)場合は0を返す*/
-  if(my_index < 5 || opponent_index < 5) return 0;
+  if(my_index == 0 || opponent_index == 0) return 0;
   
   /*ローカルの行動インデックス配列を作成する*/
   unsigned int action_arr[ACTIOIN_CHOICES];
@@ -328,19 +328,21 @@ unsigned int next_board(unsigned int now_board, unsigned int action){
     player2_b += player1_b;
   }
   else if(action == 2){
-    player2_s += player1_b;
+    if(player2_s == 0) player2_b += player1_b;
+    else player2_s += player1_b;
   }
   else if(action == 3){
     player2_b += player1_s;
   }
   else if(action == 4){
-    player2_s += player1_s;
+    if(player2_s == 0) player2_b += player1_s;
+    else player2_s += player1_s;
   }
   else if(action == 5){
-    player1_b += player1_s;
+    player1_s += player1_b;
   }
   else if(action == 6){
-    player1_s += player1_b;
+    player1_b += player1_s;
   }
   else if(action == 7){
     unsigned int sum = player1_b + player1_s;
@@ -350,13 +352,22 @@ unsigned int next_board(unsigned int now_board, unsigned int action){
   else if(action == 8){
     unsigned int sum = player1_b + player1_s;
     player1_s = 2;
-    player1_b = sum-2;
+    player1_b = sum - 2;
+    
   }
   else if(action == 9){
     unsigned int sum = player1_b + player1_s;
     player1_s = 3;
     player1_b = sum-3;
   }
+  if(player1_b >= 5) player1_b = 0;
+  //player1_b = player1_b % 5;
+  if(player1_s >= 5) player1_s = 0;
+  //player1_s = player1_s % 5;
+  if(player2_b >= 5) player2_b = 0;
+  //player2_b = player2_b % 5;
+  if(player2_s >= 5) player2_s = 0;
+  //player2_s = player2_s % 5;
 
   return decoding_board_hash(player1_s,player1_b,player2_s,player2_b);
 }
@@ -594,7 +605,7 @@ void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int
       }
     }
   }
-
+  printf("elite_situ = %d\n",elite_situ);
   return;
 }
 
@@ -629,7 +640,7 @@ void print_genome(unsigned int genome[GENOME_LENGTH][BOARD_NUM]){
     if(gen == 1 || gen == 0){
       printf("==========gen:%d==========\n",gen);
       for(unsigned int board = 0; board < BOARD_NUM; board++){
-        printf("board %d : %d | ",board,genome[gen][board]);
+        printf("board %3d : %d | ",board,genome[gen][board]);
         if(board %10 == 9)printf("\n");
       }
       printf("\n");
@@ -669,13 +680,14 @@ int main(void){
 
   /*世代数分loopする*/
   for(unsigned int generation = 1; generation <= GENERATIONS_NUMBER; generation++){
+    printf("generation = %d ",generation);
     /*childrenの値をparents(現行世代)にコピー*/
     copy_genome(parents,children);
 
-    if(generation == 1){
+    /*if(generation == 1){
       printf("----------------------------------------first generation(parents)---------------------------------------------\n");
       print_genome(parents);
-    }
+    }*/
 
 
     /*それぞれの個体を評価する*/

@@ -17,7 +17,16 @@
 
 #define ACTIOIN_CHOICES 10 // 行動インデックスの総数
 
-int board = 80;
+
+/*盤面ハッシュから自分の手の情報を返す*/
+unsigned int my_hands_index(unsigned int board_hash){
+  return (board_hash / 15);
+}
+
+/*盤面ハッシュから自分の手の情報を返す*/
+unsigned int opponent_hands_index(unsigned int board_hash){
+  return (board_hash % 15);
+}
 
 /*盤面ハッシュから自分の小さい指の値を返す*/
 unsigned int my_small_finger(unsigned int board_hash){
@@ -69,7 +78,127 @@ unsigned int decoding_board_hash(unsigned int player1_r,unsigned int player1_l, 
   return ( ( 15 * ( ((player1_s * ( 9 - player1_s )) / 2)  + player1_b) ) + ( ((player2_s * ( 9 - player2_s )) / 2)  + player2_b) );
 }
 
-int main(void){
+/*盤面ハッシュを一時的に相手視点に変えるための関数*/
+unsigned int reverse_board(unsigned int board){
+  unsigned int board2 = (opponent_hands_index(board) * 15) + my_hands_index(board);
+  return board2;
+}
 
+/*引数の盤面ハッシュに対応する盤面から、引数の行動インデックスに対応する行動をとると遷移する次の盤面を返す*/
+unsigned int next_board(unsigned int now_board, unsigned int action){
+  unsigned int player1_s = my_small_finger(now_board);
+  unsigned int player1_b = my_big_finger(now_board);
+  unsigned int player2_s = opponent_small_finger(now_board);
+  unsigned int player2_b = opponent_big_finger(now_board);
+  //unsigned int board = now_board;
+  /*行動インデックス毎に場合分け*/
+  if(action == 1){
+    player2_b += player1_b;
+  }
+  else if(action == 2){
+    if(player2_s == 0) player2_b += player1_b;
+    else player2_s += player1_b;
+  }
+  else if(action == 3){
+    player2_b += player1_s;
+  }
+  else if(action == 4){
+    if(player2_s == 0) player2_b += player1_s;
+    else player2_s += player1_s;
+  }
+  else if(action == 5){
+    player1_s += player1_b;
+  }
+  else if(action == 6){
+    player1_b += player1_s;
+  }
+  else if(action == 7){
+    unsigned int sum = player1_b + player1_s;
+    player1_s = 1;
+    player1_b = sum-1;
+  }
+  else if(action == 8){
+    unsigned int sum = player1_b + player1_s;
+    player1_s = 2;
+    player1_b = sum - 2;
+    
+  }
+  else if(action == 9){
+    unsigned int sum = player1_b + player1_s;
+    player1_s = 3;
+    player1_b = sum-3;
+  }
+  if(player1_b >= 5) player1_b = 0;
+  //player1_b = player1_b % 5;
+  if(player1_s >= 5) player1_s = 0;
+  //player1_s = player1_s % 5;
+  if(player2_b >= 5) player2_b = 0;
+  //player2_b = player2_b % 5;
+  if(player2_s >= 5) player2_s = 0;
+  //player2_s = player2_s % 5;
+
+  return decoding_board_hash(player1_s,player1_b,player2_s,player2_b);
+}
+
+/*盤面の状況を人が見やすいように出力する*/
+void print_board(unsigned int board){
+  printf("=======board:%3d(reverse:%3d)======\n",board,reverse_board(board));
+  printf("   cpu\n");
+  printf("( %d , %d )\n",opponent_small_finger(board),opponent_big_finger(board));
+  printf("\n\n");
+  printf("( %d , %d )\n",my_small_finger(board),my_big_finger(board));
+  printf("   player\n");
+  printf("===================================\n");
+}
+
+int main(void){
+  int action = 0;
+  int turn_num = 0;
+  int board = 80;
+  printf("Please input first or draw? (f/d)\n");
+  char c;
+  while(1){
+    scanf("%c",&c);
+    if(c == 'f') {printf("You are first turn.\n");break;}
+    else if(c == 'd') {printf("You are draw turn.\n");break;}
+    else printf("Error. Please input again.\n");
+  }
+  if(c == 'f'){
+    print_board(board);
+    while(my_big_finger(board) != 0 && opponent_big_finger(board) != 0){
+        /*ターンを進める*/
+        turn_num++;
+        if(turn_num % 2 == 1) printf("next your turn. please input action.\n");
+        else if(turn_num % 2 == 0) printf("next cpu turn. please input action.\n");
+        scanf("%d",&action);
+        //printf("read %d.\n",action);
+        if(turn_num % 2 == 1) board = next_board(board, action);
+        else if(turn_num % 2 == 0){
+        unsigned int board2 = reverse_board(board);//相手視点の盤面ハッシュ
+        board = reverse_board( next_board( board2, action ) );
+        }
+        print_board(board);
+    }
+  }
+  else if(c == 'd'){
+     print_board(board);
+    while(my_big_finger(board) != 0 && opponent_big_finger(board) != 0){
+        /*ターンを進める*/
+        turn_num++;
+        if(turn_num % 2 == 0) printf("next your turn. please input action.\n");
+        else if(turn_num % 2 == 1) printf("next cpu turn. please input action.\n");
+        scanf("%d",&action);
+        //printf("read %d.\n",action);
+        if(turn_num % 2 == 0) board = next_board(board, action);
+        else if(turn_num % 2 == 1){
+        unsigned int board2 = reverse_board(board);//相手視点の盤面ハッシュ
+        board = reverse_board( next_board( board2, action ) );
+        }
+        print_board(board);
+    } 
+  }
+  printf("\nfinish.\n");
+  if(my_big_finger(board) == 0) printf("You lose.\n");
+  else  printf("You win.\n");
   return 0;
 }
