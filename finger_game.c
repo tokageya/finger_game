@@ -650,8 +650,28 @@ void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int
 
 
 
-/*遺伝子を一部突然変異させる(未完成)*/
+/*遺伝子を一部突然変異させる*/
 void mutate_genome(unsigned int children[GENOME_LENGTH][BOARD_NUM]){
+  unsigned int gen = rand() % 100;
+  
+  /*225個の盤面が存在するため、だいたい1%の確率で二か所を入れ替える*/
+  unsigned int board_1 = rand() % BOARD_NUM;
+  unsigned int board_2 = rand() % BOARD_NUM;
+  while(board_1 == board_2 || my_big_finger(board_1) == 0 || opponent_big_finger(board_2) == 0){
+    if(my_big_finger(board_1) == 0) board_1 = rand() % BOARD_NUM;
+    else board_2 = rand() % BOARD_NUM;
+  }
+
+  unsigned int new_action_1 = rand() % ACTIOIN_CHOICES;
+  unsigned int new_action_2 = rand() % ACTIOIN_CHOICES;
+  while(children[gen][board_1] == new_action_1 || children[gen][board_2] == new_action_2){
+    if(children[gen][board_1] == new_action_1) new_action_1 = rand() % ACTIOIN_CHOICES;
+    else new_action_2 = rand() % ACTIOIN_CHOICES;
+  }
+
+  children[gen][board_1] = new_action_1;
+  children[gen][board_2] = new_action_2;
+
   return;
 }
 
