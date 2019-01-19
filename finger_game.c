@@ -119,54 +119,6 @@ typedef struct Judge_{
   unsigned int draw_first;
 } judge;
 
-int main(void){
-  unsigned int parents[GENOME_LENGTH][BOARD_NUM]; // (GENOME_LENGTH)個の現行世代(親)個体
-  unsigned int children[GENOME_LENGTH][BOARD_NUM]; // (GENOME_LENGTH)個の次世代(子)個体
-  judge evaluations[GENOME_LENGTH]; // 現行世代(親)に対応したそれぞれの評価値を登録
-  unsigned int opponent[BOARD_NUM]; // 対戦相手のボード情報
-
-  /* (GENOME_LENGTH)個の現行世代の遺伝子個体をランダムに生成 */
-  for(unsigned int gen = 0; gen < GENOME_LENGTH; gen ++){
-    init_genome_random(children[gen]);
-  }
-
-  /*最初のランダムな遺伝子情報をcsvに出力*/
-  output_genome_csv(children,"first_children.csv");
-
-  /*世代数分loopする*/
-  for(unsigned int generation = 1; generation <= GENERATIONS_NUMBER; generation++){
-    /*childrenの値をparents(現行世代)にコピー*/
-    copy_genome(parents,children);
-
-    /*それぞれの個体を評価する*/
-    evaluate_genome(parents,opponent,evaluations);
-
-    /*現行世代(親)個体から評価規準に基づいて交叉させて、次世代(子)個体を生成する*/
-    generate_genome(parents,children,evaluations);
-
-    /*次世代(子)を突然変異させる*/
-    mutate_genome(children);
-
-    /*次世代(子)遺伝子情報を出力する*/
-    printf("=========generation:%d==========\n",generation);
-    print_genome(children);
-    printf("================================\n");
-  }
-
-  /*最終世代を表示*/
-  printf("-------------final generation--------------\n");
-  print_genome(children);
-
-  /*最終世代をcsvに出力*/
-  output_genome_csv(children,"final_children.csv");
-
-  return 0;
-}
-
-
-
-
-
 /*盤面ハッシュから自分の手の情報を返す*/
 unsigned int my_hands_index(unsigned int board_hash){
   return (board_hash / 15);
@@ -236,8 +188,8 @@ void add_elem(unsigned int new_element, unsigned int* arr_len, unsigned int* arr
 
 /*行動の選択肢のリスト、行動インデックス配列を更新する*/
 void action_list(unsigned int board, unsigned int* arr_len , unsigned int* action_arr){
-  unsigned int my_index = my_hands_index(board); // 自分の両手の情報
-  unsigned int opponent_index = opponent_hands_index(board); // 相手の両手の情報
+  //unsigned int my_index = my_hands_index(board); // 自分の両手の情報
+  //unsigned int opponent_index = opponent_hands_index(board); // 相手の両手の情報
 
   unsigned int my_s = my_small_finger(board); // 自分の小さい指の情報
   unsigned int my_b = my_big_finger(board); // 自分の大きい指の情報
@@ -247,7 +199,7 @@ void action_list(unsigned int board, unsigned int* arr_len , unsigned int* actio
   (*arr_len) = 0; // (*arr_len) を初期化
 
   /*自分の両手の情報が(0,0) or 相手の両手の情報が(0,0) のとき、行動インデックス 0 を返す*/
-  if(my_b == 0 || opp_b < 5){
+  if(my_b == 0 || opp_b == 0){
     add_elem(no_action,arr_len,action_arr);
     return;
   }
@@ -333,6 +285,7 @@ unsigned int random_action_by_board(unsigned int board){
   unsigned int action_arr_len= 1;
 
   /*行動インデックス配列を更新する*/
+  //printf("action_list start.\n");
   action_list(board, &action_arr_len, action_arr);
 
   /////*行動インデックス配列の中からランダムな値を返す*/////
@@ -340,7 +293,7 @@ unsigned int random_action_by_board(unsigned int board){
 }
 
 /*一つの遺伝子にそれぞれの盤面に対しての行動をランダムに入れる*/
-void init_genome_random(unsigned int* genome){
+void init_genome_random(unsigned int genome[BOARD_NUM]){
   for(unsigned int board = 0; board < BOARD_NUM; board ++){
     genome[ board ] = random_action_by_board( board );
   }
@@ -349,8 +302,8 @@ void init_genome_random(unsigned int* genome){
 
 /*次世代(子供)のそれぞれの遺伝子情報を現行世代(親)にコピーする*/
 void copy_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int children[GENOME_LENGTH][BOARD_NUM]){
-  for(int gen = 0; gen < GENOME_LENGTH; gen++){
-    for(int board; board < BOARD_NUM; board++){
+  for(unsigned int gen = 0; gen < GENOME_LENGTH; gen++){
+    for(unsigned int board = 0; board < BOARD_NUM; board++){
       parents[ gen ][ board ] = children[ gen ][ board ];
     }
   }
@@ -359,17 +312,17 @@ void copy_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int chi
 
 /*盤面ハッシュを一時的に相手視点に変えるための関数*/
 unsigned int reverse_board(unsigned int board){
-  board2 = (opponent_hands_index(board) * 15) + my_hands_index(board);
+  unsigned int board2 = (opponent_hands_index(board) * 15) + my_hands_index(board);
   return board2;
 }
 
 /*引数の盤面ハッシュに対応する盤面から、引数の行動インデックスに対応する行動をとると遷移する次の盤面を返す*/
 unsigned int next_board(unsigned int now_board, unsigned int action){
-  player1_s = my_small_finger(now_board);
-  player1_b = my_big_finger(now_board);
-  player2_s = opponent_small_finger(now_board);
-  player2_b = opponent_big_finger(now_board);
-  unsigned int board = now_board;
+  unsigned int player1_s = my_small_finger(now_board);
+  unsigned int player1_b = my_big_finger(now_board);
+  unsigned int player2_s = opponent_small_finger(now_board);
+  unsigned int player2_b = opponent_big_finger(now_board);
+  //unsigned int board = now_board;
   /*行動インデックス毎に場合分け*/
   if(action == 1){
     player2_b += player1_b;
@@ -426,18 +379,18 @@ judge battle(unsigned int player1[BOARD_NUM], unsigned int player2[BOARD_NUM]){
 
   unsigned int board = 80; // (先攻側から見た)盤面の状況のハッシュ値を格納
   unsigned int turn_num = 0; // ターン数を格納
-  unsigned int board_log[MAX_LOG] = {}; // ボードの履歴を格納。「配列のn番目の要素 = nターン目の盤面ハッシュ」とする。
+  unsigned int board_log[MAX_LOG]; // ボードの履歴を格納。「配列のn番目の要素 = nターン目の盤面ハッシュ」とする。
   board_log[0] = 80;//0ターン目を最初の配列の先頭とする
   unsigned int board_log_len = 1;
   unsigned int loop_flag = 0; // 盤面がループしていた時に立てるフラグ
   
   /*==================== player1を先攻として戦う ====================*/
-  while(my_big_finger(board) != 0 && opponent_big_finger(board) != 0 && !(loop_flag){
+  while(my_big_finger(board) != 0 && opponent_big_finger(board) != 0 && !(loop_flag)){
     /*ターンを進める*/
     turn_num++;
     if(turn_num % 2 == 1) board = next_board(board, player1[board]);
     else{
-      board2 = reverse_board(board);//相手視点の盤面ハッシュ
+      unsigned int board2 = reverse_board(board);//相手視点の盤面ハッシュ
       board = reverse_board( next_board( board2, player2[board2]) );
     }
     add_elem(board,&board_log_len,board_log);
@@ -458,18 +411,18 @@ judge battle(unsigned int player1[BOARD_NUM], unsigned int player2[BOARD_NUM]){
 
   board = 80; // 盤面を初期化
   turn_num = 0; // ターン数を初期化
-  board_log[MAX_LOG] = {}; // ボードの履歴を初期化
+  //board_log[MAX_LOG] = ; // ボードの履歴を初期化
   board_log[0] = 80;//0ターン目を最初の配列の先頭とする
   board_log_len = 1;
   loop_flag = 0; // 盤面がループしていた時に立てるフラグの初期化
 
   /*==================== player1を後攻として戦う ====================*/
-  while(my_big_finger(board) != 0 && opponent_big_finger(board) != 0 && !(loop_flag){
+  while(my_big_finger(board) != 0 && opponent_big_finger(board) != 0 && !(loop_flag)){
     /*ターンを進める*/
     turn_num++;
     if(turn_num % 2 == 0) board = next_board(board, player1[board]);
     else{
-      board2 = reverse_board(board);//相手視点の盤面ハッシュ
+      unsigned int board2 = reverse_board(board);//相手視点の盤面ハッシュ
       board = reverse_board( next_board( board2, player2[board2]) );
     }
     add_elem(board,&board_log_len,board_log);
@@ -501,7 +454,7 @@ void evaluate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM], unsigned in
   return;
 }
 
-/*引数の配列について、添え字の要素を削除して配列を更新する*/ //使わないかも
+/*引数の配列について、添え字の要素を削除して配列を更新する*/ //使っていない
 void delete_arr_elem(unsigned int position, unsigned int *arr_len, unsigned int *arr){
   for(int i = 0; i < position; i ++)arr++;
   for(int i = position; i < ((*arr_len)-1); i++)arr[i] = arr[i + 1];
@@ -645,11 +598,6 @@ void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int
   return;
 }
 
-
-
-
-
-
 /*遺伝子を一部突然変異させる*/
 void mutate_genome(unsigned int children[GENOME_LENGTH][BOARD_NUM]){
   unsigned int gen = rand() % 100;
@@ -677,10 +625,88 @@ void mutate_genome(unsigned int children[GENOME_LENGTH][BOARD_NUM]){
 
 /*genome情報を出力する(未完成)*/
 void print_genome(unsigned int genome[GENOME_LENGTH][BOARD_NUM]){
+  for(unsigned int gen = 0; gen < GENOME_LENGTH; gen++){
+    if(gen == 1 || gen == 0){
+      printf("==========gen:%d==========\n",gen);
+      for(unsigned int board = 0; board < BOARD_NUM; board++){
+        printf("board %d : %d | ",board,genome[gen][board]);
+        if(board %10 == 9)printf("\n");
+      }
+      printf("\n");
+    }
+  }
   return;
 }
 
 /*遺伝情報をcsvに出力する(未完成)*/
-void output_genome_csv(unsigned int genome[GENOME_LENGTH][BOARD_NUM],char *fname){
+/*void output_genome_csv(unsigned int genome[GENOME_LENGTH][BOARD_NUM],char *fname){
   return;
+}*/
+
+
+
+
+
+
+
+
+int main(void){
+  unsigned int parents[GENOME_LENGTH][BOARD_NUM]; // (GENOME_LENGTH)個の現行世代(親)個体
+  unsigned int children[GENOME_LENGTH][BOARD_NUM]; // (GENOME_LENGTH)個の次世代(子)個体
+  judge evaluations[GENOME_LENGTH]; // 現行世代(親)に対応したそれぞれの評価値を登録
+  unsigned int opponent[BOARD_NUM]; // 対戦相手のボード情報
+
+  /* (GENOME_LENGTH)個の現行世代の遺伝子個体をランダムに生成 */
+  for(unsigned int gen = 0; gen < GENOME_LENGTH; gen ++){
+    init_genome_random(children[gen]);
+  }
+
+  printf("----------------------------------------first generation(children)---------------------------------------------\n");
+  print_genome(children);
+
+  /*最初のランダムな遺伝子情報をcsvに出力*/
+  //output_genome_csv(children,"first_children.csv");
+
+  /*世代数分loopする*/
+  for(unsigned int generation = 1; generation <= GENERATIONS_NUMBER; generation++){
+    /*childrenの値をparents(現行世代)にコピー*/
+    copy_genome(parents,children);
+
+    if(generation == 1){
+      printf("----------------------------------------first generation(parents)---------------------------------------------\n");
+      print_genome(parents);
+    }
+
+
+    /*それぞれの個体を評価する*/
+    evaluate_genome(parents,opponent,evaluations);
+
+    /*現行世代(親)個体から評価規準に基づいて交叉させて、次世代(子)個体を生成する*/
+    generate_genome(parents,children,evaluations);
+
+    /*次世代(子)を突然変異させる*/
+    mutate_genome(children);
+    
+    
+    /*次世代(子)遺伝子情報を出力する*/
+    /*if(generation % 20 == 1){
+      printf("=========generation:%d==========\n",generation);
+      print_genome(children);
+      printf("================================\n");
+    }*/
+  }
+
+  /*最終世代を表示*/
+  printf("------------------------------------------final generation--------------------------------------------\n");
+  print_genome(children);
+
+  /*最終世代をcsvに出力*/
+  //output_genome_csv(children,"final_children.csv");
+
+  return 0;
 }
+
+
+
+
+
