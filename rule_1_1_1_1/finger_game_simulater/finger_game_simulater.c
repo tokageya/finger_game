@@ -100,10 +100,13 @@ unsigned int next_board(unsigned int now_board, unsigned int action){
     else player2_s += player1_b;
   }
   else if(action == 3){
-    player2_b += player1_s;
+    if(player1_s == 0) player2_b += player1_b;
+    else player2_b += player1_s;
   }
   else if(action == 4){
-    if(player2_s == 0) player2_b += player1_s;
+    if(player1_s == 0 && player2_s == 0) player2_b += player1_b;
+    else if(player1_s == 0) player2_s += player1_b;
+    else if(player2_s == 0) player2_b += player1_s;
     else player2_s += player1_s;
   }
   else if(action == 5){
