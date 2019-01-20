@@ -680,9 +680,6 @@ int main(void){
   for(unsigned int gen = 0; gen < GENOME_LENGTH; gen ++){
     init_genome_random(children[gen]);
   }
-  for(unsigned int gen = 0; gen < GENOME_LENGTH; gen ++){
-    if(children[gen][96] == 9)printf("\nnankahaitteru!!!!!!!!!!!!!!!!!!!!!!!\n\n");
-  }
 
   //printf("----------------------------------------first generation(children)---------------------------------------------\n");
   //print_genome(children);
