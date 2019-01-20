@@ -10,7 +10,7 @@
  * 7. 自分の小さい指が1になるように分割する
  * 8. 自分の小さい指が2になるように分割する
  * 9. 自分の小さい指が3になるように分割する
-
+ * //※両手のそれぞれの指の値が同じ場合はそれぞれの対象を小さい指の値として行動インデックスを捉える
 */
 /*---------------------------------------------*/
 
@@ -72,11 +72,10 @@
 */
 
 // 選択方法 //
-/* とりあえずエリート選択
- * 今回で言えばエリート遺伝子を上から20体, エリート遺伝子を交叉させて生み出した子孫40体, エリート以外の現行遺伝子40体の計100体とする */
-
+/* お互いを戦わせてその結果からエリート選択
+ * */
 // 交叉方法 //
-// とりあえず二点交叉
+// 一様交叉
 
 // 突然変異方法 //
 //とりあえず個体突然変異率1%, 遺伝子突然変異率1%
@@ -87,7 +86,7 @@
 
 
 #define GENOME_LENGTH 100 // 1世代の個体数
-#define GENERATIONS_NUMBER 100 // 世代数
+#define GENERATIONS_NUMBER 500 // 世代数
 #define BOARD_NUM 225 // 盤面の総数
 
 #define no_action 0 // 行動インデックス0. 行動なし
@@ -106,9 +105,9 @@
 
 #define ACTIOIN_CHOICES 10 // 行動インデックスの総数
 #define MAX_LOG 200 // ボードの履歴を格納する数
-#define ELITE_GENOME_NUM 20 // 次世代に残す現行のエリート遺伝子の数
-#define ELITE_PROGENCY_GENOME_NUM 40 // 交叉させて生み出す次世代の遺伝子の数
-#define OTHER_GENOME_NUM 40 // 次世代に残すその他の遺伝子
+#define ELITE_GENOME_NUM 10 // 次世代に残す現行のエリート遺伝子の数
+#define ELITE_PROGENCY_GENOME_NUM 60 // 交叉させて生み出す次世代の遺伝子の数
+#define OTHER_GENOME_NUM 30 // 次世代に残すその他の遺伝子
 
 
 /*勝敗判定で使う judge 構造体を作成*/
@@ -206,30 +205,31 @@ void action_list(unsigned int board, unsigned int* arr_len , unsigned int* actio
   /* 行動インデックス配列に行動インデックス 1 を入れる */
   add_elem(attack_b_to_b,arr_len,action_arr);
 
-  /* 相手の小さい指が 1 以上のとき
+  /* ( 相手の小さい指が 1 以上 && 相手の両手の指が一緒じゃない ) のとき
    * 自分の大きい指で相手の小さい指を攻撃する行動インデックス 2 を行動インデックス配列に入れる */
-  if(my_s >= 1){
+  if( ( opp_s >= 1 ) && (opp_s != opp_b) ){
     add_elem(attack_b_to_s,arr_len,action_arr);
   }
 
-  /* 自分の小さい指が 1 以上のとき
+  /* ( 自分の小さい指が 1 以上 && 自分の両手の指が一緒じゃない ) のとき
    * 自分の小さい指で相手の大きい指を攻撃する行動インデックス 3 を行動インデックス配列に入れる */
-  if(my_s >= 1){
+  if( ( my_s >= 1 ) && ( my_s != my_b ) ){
     add_elem(attack_s_to_b,arr_len,action_arr);
   }
 
-  /* 自分の小さい指が 1 以上 && 相手の小さい指が 1 以上のとき
+  /* ( ( 自分の小さい指が 1 以上 && 自分の両手の指が一緒じゃない ) && ( 相手の小さい指が 1 以上 && 相手の両手の指が一緒じゃない ) ) のとき
    * 自分の小さい指で相手の小さい指を攻撃する行動インデックス 4 を行動インデックス配列に入れる */
-  if(my_s >= 1 && opp_s >= 1){
+  if( ( (my_s >= 1) && (my_s != my_b) ) && ( (opp_s >= 1) && (opp_s != opp_b) ) ){
     add_elem(atttack_s_to_s,arr_len,action_arr);
   }
 
   /* 自分の小さい指が 1 以上のとき
-   * 自分の大きい指で自分の小さい指を攻撃する行動インデックス 5 と、
+   * 自分の大きい指で自分の小さい指を攻撃する行動インデックス 5 を入れ、
+   * ( 自分の小さい指が 1 以上 && 自分の両手の指が一緒じゃない ) とき
    * 自分の大きい指で自分の小さい指を攻撃する行動インデックス 6 の二つを　行動インデックス配列に入れる */
   if(my_s >= 1){
     add_elem(attack_b_to_my_s,arr_len,action_arr);
-    add_elem(attack_s_to_my_b,arr_len,action_arr);
+    if(my_s != my_b)add_elem(attack_s_to_my_b,arr_len,action_arr);
   }
 
   /* ( (自分の小さい指が 0 && 自分の大きい指が 2 以上) or (自分の指が両方とも 2 以上 && 自分の両方の指の合計が 5 以下) ) のとき
@@ -362,14 +362,14 @@ unsigned int next_board(unsigned int now_board, unsigned int action){
     player1_s = 3;
     player1_b = sum-3;
   }
-  //if(player1_b >= 5) player1_b = 0;
-  player1_b = player1_b % 5;
-  //if(player1_s >= 5) player1_s = 0;
-  player1_s = player1_s % 5;
-  //if(player2_b >= 5) player2_b = 0;
-  player2_b = player2_b % 5;
-  //if(player2_s >= 5) player2_s = 0;
-  player2_s = player2_s % 5;
+  if(player1_b >= 5) player1_b = 0;
+  //player1_b = player1_b % 5;
+  if(player1_s >= 5) player1_s = 0;
+  //player1_s = player1_s % 5;
+  if(player2_b >= 5) player2_b = 0;
+  //player2_b = player2_b % 5;
+  if(player2_s >= 5) player2_s = 0;
+  //player2_s = player2_s % 5;
 
   return decoding_board_hash(player1_s,player1_b,player2_s,player2_b);
 }
@@ -458,7 +458,7 @@ judge battle(unsigned int player1[BOARD_NUM], unsigned int player2[BOARD_NUM]){
   return j;
 }
 
-/*現行世代(親)の情報をもとに敵の情報から評価する*/ // 相手の行動をランダムにとり、それと戦わせたときの結果からエリート方式で評価
+/*現行世代(親)の情報をもとに敵の情報から評価する*/ //現行世代どおしを戦わせて評価するトーナメント方式
 void evaluate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM], unsigned int opponent[BOARD_NUM],judge evaluations[GENOME_LENGTH]){
   /*evaluations関数を初期化*/
   for(unsigned int gen = 0; gen < GENOME_LENGTH; gen++){
@@ -469,8 +469,7 @@ void evaluate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM], unsigned in
 
   /*それぞれの個体を戦わせて、評価を evalutions 配列の添え字が対応する場所に入れる*/
   for(unsigned int gen1 = 0; gen1 < GENOME_LENGTH; gen1++){
-    /*
-    for(int gen2 = gen1 + 1; gen2 < GENOME_LENGTH; gen2++){
+    for(unsigned int gen2 = gen1 + 1; gen2 < GENOME_LENGTH; gen2++){
       judge j1 = battle( parents[ gen1 ] , parents[ gen2 ] );
       judge j2 = battle( parents[ gen2 ] , parents[ gen1 ] );
 
@@ -481,8 +480,8 @@ void evaluate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM], unsigned in
       evaluations[ gen2 ].play_first += j2.play_first;
       evaluations[ gen2 ].draw_first += j2.draw_first;
     }
-    */
-    evaluations[ gen1 ] = battle( parents[ gen1 ] , opponent);
+    
+    //evaluations[ gen1 ] = battle( parents[ gen1 ] , opponent);
   }
   return;
 }
@@ -495,26 +494,11 @@ void delete_arr_elem(unsigned int position, unsigned int *arr_len, unsigned int 
   return;
 }
 
-/*引数の2つの遺伝子について、配列のある2つポジションで交叉させて更新する*/ // 2点交叉
-void cross_over(unsigned int parent_1[BOARD_NUM], unsigned int parent_2[BOARD_NUM], unsigned int cross_1, unsigned int cross_2, unsigned int child[BOARD_NUM] ){
-  unsigned int cross_s, cross_b;
-  if(cross_1 < cross_2){
-    cross_s = cross_1;
-    cross_b = cross_2;
-  }
-  else{
-    cross_s = cross_2;
-    cross_b = cross_1;
-  }
-
-  for(unsigned int i = 0; i < cross_s; i++){
-    child[i] = parent_1[i];
-  }
-  for(unsigned int i = cross_s; i < cross_b; i++){
-    child[i] = parent_2[i];
-  }
-  for(unsigned int i = cross_b; i < BOARD_NUM; i++){
-    child[i] = parent_1[i];
+/*引数の2つの遺伝子について、配列のある2つポジションで交叉させて更新する*/
+void cross_over(unsigned int parent_1[BOARD_NUM], unsigned int parent_2[BOARD_NUM], unsigned int child[BOARD_NUM] ){
+  for(unsigned int board = 0; board < BOARD_NUM; board++){
+    if(rand()%2 == 1) child[board] = parent_1[board];    
+    else child[board] = parent_2[board];
   }
 }
 
@@ -523,103 +507,63 @@ void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int
   /*現行世代で良い結果を持っている親を捜す*/
   unsigned int elite_arr[GENOME_LENGTH][BOARD_NUM] = {};
   unsigned int elite_arr_len = 0;
-  unsigned int elite_situ = 6;//エリート個体のうち、一番評価が低い個体を示す
-  
-  /*エリート選択1. 先攻, 後攻ともに勝利した個体を探し、エリート配列に入れる*/
-  for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
-    if(evaluations[gen].goalpoints_difference == 6){
-      for(int i = 0; i < BOARD_NUM; i++){
-        elite_arr[elite_arr_len][i] = parents[gen][i];
+  unsigned int elite_situ = 0; // 最終的に親として選んだ個体の中で最も低い評価の値が入る
+  unsigned int elite_position = 0;
+  while(elite_arr_len < ELITE_GENOME_NUM){
+    elite_situ = 0;//リセット
+    elite_position = 0;//リセット
+    /*まずは現行世代の中でどれが一番良い個体であるかを捜す*/
+    for(unsigned int gen = 0; gen < GENOME_LENGTH; gen++){
+      if(elite_situ < evaluations[gen].goalpoints_difference){
+        
+        elite_situ = evaluations[gen].goalpoints_difference;
+        elite_position = gen;
       }
-      elite_arr_len ++;    
     }
-  }
+    //printf("===============================================\n======================================\n===============================");
+    //printf("now_elite_situ:%d | ",elite_situ);
+    /*現行世代の中で良い個体をエリート個体配列に入れる*/
+    
+    for(unsigned int board = 0; board < BOARD_NUM; board++){
+      elite_arr[elite_arr_len][board] = parents[elite_position][board];
+      //printf("elite_arr[%d] = %d | \n",elite_arr_len,elite_arr[elite_arr_len][board]);
+    
+      //children[elite_arr_len][board] = parents[elite_position][board];
+    }
+    
+    
+    evaluations[elite_position].goalpoints_difference = 0;//選び終わった個体の評価を0に戻す
+    elite_arr_len++;
+    //printf("\nelite_arr_len = %d\n",elite_arr_len);
+    
 
-  //エリート選択1でエリートの個体数が足りない場合、
-  /*エリート選択2. 先攻, 後攻どちらかで勝利し、どちらかで引き分けた個体を探し、エリート配列に入れる*/
-  //printf("elite1 : elite_arr_len=%d | ",elite_arr_len);
-  if(elite_arr_len < ELITE_GENOME_NUM){
-    elite_situ = 4;
-    for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
-      if(evaluations[gen].goalpoints_difference == 4){
-        for(int i = 0; i < BOARD_NUM; i++){
-          elite_arr[elite_arr_len][i] = parents[gen][i];
-        }
-        elite_arr_len ++;
-      }
-    }
+    //printf("now_most_evaluations:%d | ",elite_situ);
   }
+  //printf("now_most_elite_evaluations:%d | ",elite_situ);
 
-  //エリート選択2でエリートの個体数が足りない場合、
-  /*エリート選択3. 先攻, 後攻どちらも引き分けた個体を探し、エリート配列に入れる*/
-  //printf("elite2 : elite_arr_len = %d | ",elite_arr_len);
-  if(elite_arr_len < ELITE_GENOME_NUM){
-    elite_situ = 2;
-    for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
-      if(evaluations[gen].goalpoints_difference == 2){
-        for(int i = 0; i < BOARD_NUM; i++){
-          elite_arr[elite_arr_len][i] = parents[gen][i];
-        }
-        elite_arr_len ++;
-      }
-    }
-  }
 
-  //エリート選択3でエリートの個体数が足りない場合、
-  /*エリート選択4. 先攻, 後攻どちらかで引き分け、どちらかで負けた個体を探し、エリート配列に入れる*/
-  //printf("elite3 : elite_arr_len=%d | ",elite_arr_len);
-  if(elite_arr_len < ELITE_GENOME_NUM){
-    elite_situ = 1;
-    for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
-      if(evaluations[gen].goalpoints_difference == 1){
-        for(int i = 0; i < BOARD_NUM; i++){
-          elite_arr[elite_arr_len][i] = parents[gen][i];
-        }
-        elite_arr_len ++;
-      }
-    }
-  }
-
-  //エリート選択4でエリートの個体数が足りない場合、
-  /*エリート選択5. 先攻, 後攻どちらも負けた個体を探し、エリート配列に入れる*/
-  if(elite_arr_len < ELITE_GENOME_NUM){
-    elite_situ = 0;
-    for(int gen = 0; gen < GENOME_LENGTH; gen++ ){
-      if(evaluations[gen].goalpoints_difference == 0){
-        for(int i = 0; i < BOARD_NUM; i++){
-          elite_arr[elite_arr_len][i] = parents[gen][i];
-        }
-        elite_arr_len ++;
-      }
-    }
-  }
 
   /*エリート個体のうち、(ELITE_GENOME_NUM)体を次世代に入れる*/
   for(int eli_gen = 0; eli_gen < ELITE_GENOME_NUM; eli_gen++){
     for(int board = 0; board < BOARD_NUM; board++){
+      //printf("elite_arr[%d][%d]=%d|",eli_gen,board,elite_arr[eli_gen][board]);
       children[eli_gen][board] = elite_arr[eli_gen][board];
     }
   }
+  
 
-  /*エリート個体を適当に選び二点交叉させ、(ELITE_PROGENCY_NUM)体を次世代に残す*/
+  /*エリート個体を一様交叉させ、(ELITE_PROGENCY_NUM)体を次世代に残す*/
   unsigned int gen1, gen2;
-  unsigned int cross_1, cross_2;
+  //unsigned int cross_1, cross_2;
   for(unsigned int n_gen = ELITE_GENOME_NUM; n_gen < (ELITE_GENOME_NUM + ELITE_PROGENCY_GENOME_NUM); n_gen++){
     /*エリート個体からランダムに二つ選択する*/
-    gen1 = rand() % elite_arr_len;
-    gen2 = rand() % elite_arr_len;
+    gen1 = rand() % ELITE_GENOME_NUM;
+    gen2 = rand() % ELITE_GENOME_NUM;
     while(gen1 == gen2){
-      gen1 = rand() % elite_arr_len;
-      gen2 = rand() % elite_arr_len;
+      gen1 = rand() % ELITE_GENOME_NUM;
+      gen2 = rand() % ELITE_GENOME_NUM;
     }
-    /*選んだ2体のエリート個体を二点交叉させる*/
-    cross_1 = rand() % BOARD_NUM;
-    cross_2 = rand() % BOARD_NUM;
-    while(cross_1 == cross_2){
-      cross_1 = rand() % BOARD_NUM;
-      cross_2 = rand() % BOARD_NUM;
-    }
-    cross_over(elite_arr[gen1], elite_arr[gen2], cross_1, cross_2, children[ n_gen ]);
+    cross_over(elite_arr[gen1], elite_arr[gen2], children[ n_gen ]);
   }
   
   /*エリート以外の現行遺伝子をランダムに入れる*/
@@ -630,8 +574,16 @@ void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int
       }
     }
   }
-  //printf("elite_situ = %d\n",elite_situ);
+  
   return;
+}
+
+/*配列の中に要素が入っているかどうか判定する*/
+unsigned int include_arr(unsigned int el,unsigned int arr_len, unsigned int arr[ACTIOIN_CHOICES]){
+  for(int i = 0; i < arr_len; i++){
+    if(arr[i] == el)return 1;
+  }
+  return 0;
 }
 
 /*遺伝子を一部突然変異させる*/
@@ -648,17 +600,19 @@ void mutate_genome(unsigned int children[GENOME_LENGTH][BOARD_NUM]){
   action_list(board_1,&action_arr_len_1,action_arr_1);
   action_list(board_2,&action_arr_len_2,action_arr_2);
   while(board_1 == board_2 || my_big_finger(board_1) == 0 || opponent_big_finger(board_2) == 0 || action_arr_len_1 == 1 || action_arr_len_2 == 1){
-    if(my_big_finger(board_1) == 0 || action_arr_len_1 == 1) board_1 = rand() % BOARD_NUM;
+    if(board_1 == board_2 || my_big_finger(board_1) == 0 || action_arr_len_1 == 1) board_1 = rand() % BOARD_NUM;
     else board_2 = rand() % BOARD_NUM;
+    action_list(board_1,&action_arr_len_1,action_arr_1);
+    action_list(board_2,&action_arr_len_2,action_arr_2);
   }
 
   
-  unsigned int new_action_1 = rand() % ACTIOIN_CHOICES;
-  unsigned int new_action_2 = rand() % ACTIOIN_CHOICES;
+  unsigned int new_action_1 = action_arr_1[rand() % action_arr_len_1];
+  unsigned int new_action_2 = action_arr_2[rand() % action_arr_len_2];
   /*すでに同じ行動が入っている場合 or 盤面に対しての行動が存在しない*/
   while(children[gen][board_1] == new_action_1 || children[gen][board_2] == new_action_2){
-    if(children[gen][board_1] == new_action_1) new_action_1 = rand() % ACTIOIN_CHOICES;
-    else new_action_2 = rand() % ACTIOIN_CHOICES;
+    if(children[gen][board_1] == new_action_1) new_action_1 = action_arr_1[rand() % action_arr_len_1];
+    else new_action_2 = action_arr_2[rand() % action_arr_len_2];
   }
 
   children[gen][board_1] = new_action_1;
@@ -670,7 +624,7 @@ void mutate_genome(unsigned int children[GENOME_LENGTH][BOARD_NUM]){
 /*genome情報を出力する*/
 void print_genome(unsigned int genome[GENOME_LENGTH][BOARD_NUM]){
   for(unsigned int gen = 0; gen < GENOME_LENGTH; gen++){
-    if(gen == 30 || gen == 31){
+    if(gen == 30 || gen == 31 || gen == 1){
       printf("==========gen:%d==========\n",gen);
       for(unsigned int board = 0; board < BOARD_NUM; board++){
         printf("board %3d : %d | ",board,genome[gen][board]);
@@ -704,46 +658,103 @@ int main(void){
   for(unsigned int gen = 0; gen < GENOME_LENGTH; gen ++){
     init_genome_random(children[gen]);
   }
+  for(unsigned int gen = 0; gen < GENOME_LENGTH; gen ++){
+    if(children[gen][96] == 9)printf("\nnankahaitteru!!!!!!!!!!!!!!!!!!!!!!!\n\n");
+  }
 
-  printf("----------------------------------------first generation(children)---------------------------------------------\n");
-  print_genome(children);
+  //printf("----------------------------------------first generation(children)---------------------------------------------\n");
+  //print_genome(children);
+
+  //evaluate_genome(children,opponent,evaluations);
+  /*まずは現行世代の中でどれが一番良い個体であるかを捜す*/
+  /*
+  unsigned int elite_situ = 0;
+  unsigned int elite_position = 0;
+  for(int i = 0; i < 10; i++){
+    for(unsigned int gen = 0; gen < GENOME_LENGTH; gen++){
+      if(elite_situ < evaluations[gen].goalpoints_difference){
+        elite_situ = evaluations[gen].goalpoints_difference;
+        elite_position = gen;
+      }
+    }
+    printf("==========gen:%d==========\n",elite_position);
+    printf("========evaluation:%d=========\n",elite_situ);
+    for(unsigned int board = 0; board < BOARD_NUM; board++){
+      printf("board %3d : %d | ",board,children[elite_position][board]);
+      if(board %10 == 9)printf("\n");
+    }
+    evaluations[elite_position].goalpoints_difference = 0;
+    elite_situ = 0;
+    printf("\n");
+  }*/
 
   /*最初のランダムな遺伝子情報をcsvに出力*/
   //output_genome_csv(children,"first_children.csv");
 
   /*世代数分loopする*/
   for(unsigned int generation = 1; generation <= GENERATIONS_NUMBER; generation++){
-    //printf("generation = %3d ",generation);
+    
+    //printf("generation = %3d \n",generation);
     /*childrenの値をparents(現行世代)にコピー*/
     copy_genome(parents,children);
 
-    /*if(generation == 1){
-      printf("----------------------------------------first generation(parents)---------------------------------------------\n");
-      print_genome(parents);
-    }*/
-
-
+    
     /*それぞれの個体を評価する*/
     evaluate_genome(parents,opponent,evaluations);
 
+    
+
+
     /*現行世代(親)個体から評価規準に基づいて交叉させて、次世代(子)個体を生成する*/
     generate_genome(parents,children,evaluations);
+    /*
+    if(generation == 1){
+      printf("----------------------------------------second generation(children)---------------------------------------------\n");
+      print_genome(children);
+    }*/
 
     /*次世代(子)を突然変異させる*/
     mutate_genome(children);
     
     
     /*次世代(子)遺伝子情報を出力する*/
-    /*if(generation % 20 == 1){
+    /*if(generation % 100 == 1){
       printf("=========generation:%d==========\n",generation);
       print_genome(children);
       printf("================================\n");
     }*/
+
+    for(unsigned int gen = 0; gen < GENOME_LENGTH; gen ++){
+      if(children[gen][96] == 9)printf("\nnankahaitteru!!!!!!!!!!!!!!!!!!!!!!!\ngeneration=%d\n\n",generation);
+    }
   }
 
   /*最終世代を表示*/
   printf("------------------------------------------final generation--------------------------------------------\n");
-  print_genome(children);
+  /*それぞれの個体を評価して最終的に一番良い個体を返す*/
+  evaluate_genome(children,opponent,evaluations);
+  unsigned int elite_situ = 0;
+  unsigned int elite_position = 0;
+  /*まずは現行世代の中でどれが一番良い個体であるかを捜す*/
+  for(int i = 0; i < 100; i++){
+    elite_situ = 0;
+    elite_position = 0;
+    for(unsigned int gen = 0; gen < GENOME_LENGTH; gen++){
+      if(elite_situ < evaluations[gen].goalpoints_difference){
+        elite_situ = evaluations[gen].goalpoints_difference;
+        elite_position = gen;
+      }
+    }
+    printf("==========gen:%d==========\n",elite_position);
+    printf("========evaluation:%d=========\n",elite_situ);
+    for(unsigned int board = 0; board < BOARD_NUM; board++){
+      printf("board %3d : %d | ",board,children[elite_position][board]);
+      if(board %10 == 9)printf("\n");
+    }
+    printf("\n");
+    evaluations[elite_position].goalpoints_difference = 0;
+  }
+  //print_genome(children);
 
   /*最終世代をcsvに出力*/
   //output_genome_csv(children,"final_children.csv");
