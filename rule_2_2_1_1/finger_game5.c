@@ -1,8 +1,3 @@
-////////途中////////
-
-
-
-
 
 
 /*----------行動インデックスについて---------------*/
@@ -12,11 +7,10 @@
  * 2. 自分の大きい指で相手の小さい指を攻撃する
  * 3. 自分の小さい指で相手の大きい指を攻撃する
  * 4. 自分の小さい指で相手の小さい指を攻撃する
- * 5. 自分の大きい指で自分の小さい指を攻撃する
- * 6. 自分の小さい指で自分の大きい指を攻撃する
- * 7. 自分の小さい指が1になるように分割する
- * 8. 自分の小さい指が2になるように分割する
- * 9. 自分の小さい指が3になるように分割する
+ * 5. 自分の指を合わせる ( 自分の指の両手がそれぞれ1以上 && 自分の両手の指の合計4以下 )
+ * 6. 自分の小さい指が1になるように分割する
+ * 7. 自分の小さい指が2になるように分割する
+ * 8. 自分の小さい指が3になるように分割する * 
  * //※両手のそれぞれの指の値が同じ場合はそれぞれの対象を小さい指の値として行動インデックスを捉える
 */
 /*---------------------------------------------*/
@@ -102,16 +96,18 @@
 #define attack_b_to_s 2  // 行動インデックス2. 自分の大きい指で相手の小さい指を攻撃する
 
 #define attack_s_to_b 3 // 行動インデックス3. 自分の小さい指で相手の大きい指を攻撃する
-#define atttack_s_to_s 4 // 行動インデックス4. 自分の小さい指で相手の小さい指を攻撃する
+#define attack_s_to_s 4 // 行動インデックス4. 自分の小さい指で相手の小さい指を攻撃する
 
-#define attack_b_to_my_s 5 // 行動インデックス5. 自分の大きい指で自分の小さい指を攻撃する
-#define attack_s_to_my_b 6 // 行動インデックス6. 自分の小さい指で自分の大きい指を攻撃する
+//#define attack_b_to_my_s 5 // 行動インデックス5. 自分の大きい指で自分の小さい指を攻撃する
+//#define attack_s_to_my_b 6 // 行動インデックス6. 自分の小さい指で自分の大きい指を攻撃する
 
-#define devide_s1 7 // 行動インデックス7. 自分の小さい指が1になるように分割する
-#define devide_s2 8 // 行動インデックス8. 自分の小さい指が2になるように分割する
-#define devide_s3 9 // 行動インデックス9. 自分の小さい指が3になるように分割する
+#define coalesce 5 // 行動インデックス5. 自分の二つの指を一つに合体する
 
-#define ACTIOIN_CHOICES 10 // 行動インデックスの総数
+#define devide_s1 6 // 行動インデックス6. 自分の小さい指が1になるように分割する
+#define devide_s2 7 // 行動インデックス7. 自分の小さい指が2になるように分割する
+#define devide_s3 8 // 行動インデックス8. 自分の小さい指が3になるように分割する
+
+#define ACTIOIN_CHOICES 9 // 行動インデックスの総数
 #define MAX_LOG 200 // ボードの履歴を格納する数
 #define ELITE_GENOME_NUM 10 // 次世代に残す現行のエリート遺伝子の数
 #define ELITE_PROGENCY_GENOME_NUM 60 // 交叉させて生み出す次世代の遺伝子の数
@@ -235,20 +231,17 @@ void action_list(unsigned int board, unsigned int* arr_len , unsigned int* actio
   /* ( ( 自分の小さい指が 1 以上 && 自分の両手の指が一緒じゃない ) && ( 相手の小さい指が 1 以上 && 相手の両手の指が一緒じゃない ) ) のとき
    * 自分の小さい指で相手の小さい指を攻撃する行動インデックス 4 を行動インデックス配列に入れる */
   if( ( (my_s >= 1) && (my_s != my_b) ) && ( (opp_s >= 1) && (opp_s != opp_b) ) ){
-    add_elem(atttack_s_to_s,arr_len,action_arr);
+    add_elem(attack_s_to_s,arr_len,action_arr);
   }
 
-  /* 自分の小さい指が 1 以上のとき
-   * 自分の大きい指で自分の小さい指を攻撃する行動インデックス 5 を入れ、
-   * ( 自分の小さい指が 1 以上 && 自分の両手の指が一緒じゃない ) とき
-   * 自分の大きい指で自分の小さい指を攻撃する行動インデックス 6 の二つを　行動インデックス配列に入れる */
-  if(my_s >= 1){
-    add_elem(attack_b_to_my_s,arr_len,action_arr);
-    if(my_s != my_b)add_elem(attack_s_to_my_b,arr_len,action_arr);
+  /* 自分の指の両手がそれぞれ1以上 && 自分の両手の指の合計4以下 のとき
+   * 自分の両方の指を合体させる行動インデックス 5 を行動インデックス配列に入れる */
+  if(my_s >= 1 && my_b >= 1 && ( (my_s+ my_b) <= 4) ){
+    add_elem(coalesce,arr_len,action_arr);
   }
 
   /* ( (自分の小さい指が 0 && 自分の大きい指が 2 以上) or (自分の指が両方とも 2 以上 && 自分の両方の指の合計が 5 以下) ) のとき
-   * 自分の小さい指が1になるように分割する行動インデックス 7 を行動インデックス配列に入れる */
+   * 自分の小さい指が1になるように分割する行動インデックス 6 を行動インデックス配列に入れる */
   /* 盤面の移動例
    * (0,2)->(1,1)
    * (0,3)->(1,2)
@@ -261,7 +254,7 @@ void action_list(unsigned int board, unsigned int* arr_len , unsigned int* actio
   }
 
   /* ( (自分の小さい指が 0 && 自分の大きい指が 4) or (自分の小さい指が 1 && 自分の大きい指が 3 以上) or (自分の小さい指が 3 && 自分の大きい指が 3) ) のとき
-   * 自分の小さい指が2になるように分割する行動インデックス 8 を行動インデックス配列に入れる */
+   * 自分の小さい指が2になるように分割する行動インデックス 7 を行動インデックス配列に入れる */
   /* 盤面の移動例
    * (0,4)->(2,2)
    * (1,3)->(2,2)
@@ -273,7 +266,7 @@ void action_list(unsigned int board, unsigned int* arr_len , unsigned int* actio
   }
 
   /* 自分の小さい指が
-   * 自分の小さい指が3になるように分割する行動インデックス 9 を行動インデックス配列に入れる */
+   * 自分の小さい指が3になるように分割する行動インデックス 8 を行動インデックス配列に入れる */
   /* 盤面の移動例
    * (2,4)->(3,3)
   */
@@ -349,42 +342,41 @@ unsigned int next_board(unsigned int now_board, unsigned int action){
     if(player1_s == 0) player2_b += player1_b;
     else player2_b += player1_s;
   }
-  else if(action == atttack_s_to_s/*4*/){
+  else if(action == attack_s_to_s/*4*/){
     if(player1_s == 0 && player2_s == 0) player2_b += player1_b;
     else if(player1_s == 0) player2_s += player1_b;
     else if(player2_s == 0) player2_b += player1_s;
     else player2_s += player1_s;
   }
-  else if(action == attack_b_to_my_s/*5*/){
-    player1_s += player1_b;
+  else if(action == coalesce/*5*/){
+    unsigned int sum = player1_b + player1_s;
+    player1_s = 0;
+    player1_b = sum;
   }
-  else if(action == attack_s_to_my_b/*6*/){
-    player1_b += player1_s;
-  }
-  else if(action == devide_s1/*7*/){
+  else if(action == devide_s1/*6*/){
     unsigned int sum = player1_b + player1_s;
     player1_s = 1;
     player1_b = sum-1;
   }
-  else if(action == devide_s2/*8*/){
+  else if(action == devide_s2/*7*/){
     unsigned int sum = player1_b + player1_s;
     player1_s = 2;
     player1_b = sum - 2;
     
   }
-  else if(action == devide_s3/*9*/){
+  else if(action == devide_s3/*8*/){
     unsigned int sum = player1_b + player1_s;
     player1_s = 3;
     player1_b = sum-3;
   }
-  if(player1_b >= 5) player1_b = 0;
-  //player1_b = player1_b % 5;
-  if(player1_s >= 5) player1_s = 0;
-  //player1_s = player1_s % 5;
-  if(player2_b >= 5) player2_b = 0;
-  //player2_b = player2_b % 5;
-  if(player2_s >= 5) player2_s = 0;
-  //player2_s = player2_s % 5;
+  //if(player1_b >= 5) player1_b = 0;
+  player1_b = player1_b % 5;
+  //if(player1_s >= 5) player1_s = 0;
+  player1_s = player1_s % 5;
+  //if(player2_b >= 5) player2_b = 0;
+  player2_b = player2_b % 5;
+  //if(player2_s >= 5) player2_s = 0;
+  player2_s = player2_s % 5;
 
   return decoding_board_hash(player1_s,player1_b,player2_s,player2_b);
 }
@@ -851,8 +843,6 @@ int main(void){
 
   /*世代数分loopする*/
   for(unsigned int generation = 1; generation <= GENERATIONS_NUMBER; generation++){
-
-    //printf("generation = %d\n",generation);
     
     /*childrenの値をparents(現行世代)にコピー*/
     copy_genome(parents,children);
