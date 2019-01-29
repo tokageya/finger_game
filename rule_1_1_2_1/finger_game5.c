@@ -71,7 +71,7 @@
 
 // 評価方法 //
 /*評価方法は、
- * それぞれの盤面に対して、行動を適当に決めた相手と先攻、後攻の二回ゲームを行い、
+ * それぞれの個体が総当たり戦をして、
  * 勝ったら     +3 
  * 負けたら     +0
  * 引き分けは   +1 
@@ -331,6 +331,9 @@ unsigned int reverse_board(unsigned int board){
 }
 
 /*引数の盤面ハッシュに対応する盤面から、引数の行動インデックスに対応する行動をとると遷移する次の盤面を返す*/
+
+//同じ盤面でも相手か自分かで区別して
+
 unsigned int next_board(unsigned int now_board, unsigned int action){
   unsigned int player1_s = my_small_finger(now_board);
   unsigned int player1_b = my_big_finger(now_board);
