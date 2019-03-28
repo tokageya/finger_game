@@ -111,7 +111,7 @@
 #define devide_s2 8 // 行動インデックス8. 自分の小さい指が2になるように分割する
 #define devide_s3 9 // 行動インデックス9. 自分の小さい指が3になるように分割する
 
-#define ACTIOIN_CHOICES 10 // 行動インデックスの総数
+#define ACTION_CHOICES 10 // 行動インデックスの総数
 #define MAX_LOG 200 // ボードの履歴を格納する数
 #define ELITE_GENOME_NUM 10 // 次世代に残す現行のエリート遺伝子の数
 #define ELITE_PROGENCY_GENOME_NUM 60 // 交叉させて生み出す次世代の遺伝子の数
@@ -294,7 +294,7 @@ unsigned int random_action_by_board(unsigned int board){
   if(my_index == 0 || opponent_index == 0) return 0;
   
   /*ローカルの行動インデックス配列を作成する*/
-  unsigned int action_arr[ACTIOIN_CHOICES];
+  unsigned int action_arr[ACTION_CHOICES];
   action_arr[0] = 1;
   unsigned int action_arr_len= 1;
 
@@ -597,7 +597,7 @@ void generate_genome(unsigned int parents[GENOME_LENGTH][BOARD_NUM],unsigned int
 }
 
 /*配列の中に要素が入っているかどうか判定する*/
-unsigned int include_arr(unsigned int el,unsigned int arr_len, unsigned int arr[ACTIOIN_CHOICES]){
+unsigned int include_arr(unsigned int el,unsigned int arr_len, unsigned int arr[ACTION_CHOICES]){
   for(int i = 0; i < arr_len; i++){
     if(arr[i] == el)return 1;
   }
@@ -648,15 +648,15 @@ void mutate_genome(unsigned int children[GENOME_LENGTH][BOARD_NUM]){
   unsigned int board_4 = my_rand() % BOARD_NUM;
   unsigned int board_5 = my_rand() % BOARD_NUM;
   
-  unsigned int action_arr_1[ACTIOIN_CHOICES] = {};
+  unsigned int action_arr_1[ACTION_CHOICES] = {};
   unsigned int action_arr_len_1 = 0;
-  unsigned int action_arr_2[ACTIOIN_CHOICES] = {};
+  unsigned int action_arr_2[ACTION_CHOICES] = {};
   unsigned int action_arr_len_2 = 0;
-  unsigned int action_arr_3[ACTIOIN_CHOICES] = {};
+  unsigned int action_arr_3[ACTION_CHOICES] = {};
   unsigned int action_arr_len_3 = 0;
-  unsigned int action_arr_4[ACTIOIN_CHOICES] = {};
+  unsigned int action_arr_4[ACTION_CHOICES] = {};
   unsigned int action_arr_len_4 = 0;
-  unsigned int action_arr_5[ACTIOIN_CHOICES] = {};
+  unsigned int action_arr_5[ACTION_CHOICES] = {};
   unsigned int action_arr_len_5 = 0;
   
   action_list(board_1,&action_arr_len_1,action_arr_1);
