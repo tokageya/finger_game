@@ -1,0 +1,5723 @@
+
+~~~~~~~~~~~~~~first board_evaluations~~~~~~~~~~~~~~~~~
+
+================================my_turn==================================
+board   0 : 0 | board   1 : 0 | board   2 : 0 | board   3 : 0 | board   4 : 0 | board   5 : 0 | board   6 : 0 | board   7 : 0 | board   8 : 0 | board   9 : 0 | 
+board  10 : 0 | board  11 : 0 | board  12 : 0 | board  13 : 0 | board  14 : 0 | board  15 : 0 | board  16 : 0 | board  17 : 0 | board  18 : 0 | board  19 : 0 | 
+board  20 : 0 | board  21 : 0 | board  22 : 0 | board  23 : 0 | board  24 : 0 | board  25 : 0 | board  26 : 0 | board  27 : 0 | board  28 : 0 | board  29 : 0 | 
+board  30 : 0 | board  31 : 0 | board  32 : 0 | board  33 : 0 | board  34 : 0 | board  35 : 0 | board  36 : 0 | board  37 : 0 | board  38 : 0 | board  39 : 0 | 
+board  40 : 0 | board  41 : 0 | board  42 : 0 | board  43 : 0 | board  44 : 0 | board  45 : 0 | board  46 : 0 | board  47 : 0 | board  48 : 0 | board  49 : 0 | 
+board  50 : 0 | board  51 : 0 | board  52 : 0 | board  53 : 0 | board  54 : 0 | board  55 : 0 | board  56 : 0 | board  57 : 0 | board  58 : 0 | board  59 : 0 | 
+board  60 : 0 | board  61 : 0 | board  62 : 0 | board  63 : 0 | board  64 : 0 | board  65 : 0 | board  66 : 0 | board  67 : 0 | board  68 : 0 | board  69 : 0 | 
+board  70 : 0 | board  71 : 0 | board  72 : 0 | board  73 : 0 | board  74 : 0 | board  75 : 0 | board  76 : 0 | board  77 : 0 | board  78 : 0 | board  79 : 0 | 
+board  80 : 0 | board  81 : 0 | board  82 : 0 | board  83 : 0 | board  84 : 0 | board  85 : 0 | board  86 : 0 | board  87 : 0 | board  88 : 0 | board  89 : 0 | 
+board  90 : 0 | board  91 : 0 | board  92 : 0 | board  93 : 0 | board  94 : 0 | board  95 : 0 | board  96 : 0 | board  97 : 0 | board  98 : 0 | board  99 : 0 | 
+board 100 : 0 | board 101 : 0 | board 102 : 0 | board 103 : 0 | board 104 : 0 | board 105 : 0 | board 106 : 0 | board 107 : 0 | board 108 : 0 | board 109 : 0 | 
+board 110 : 0 | board 111 : 0 | board 112 : 0 | board 113 : 0 | board 114 : 0 | board 115 : 0 | board 116 : 0 | board 117 : 0 | board 118 : 0 | board 119 : 0 | 
+board 120 : 0 | board 121 : 0 | board 122 : 0 | board 123 : 0 | board 124 : 0 | board 125 : 0 | board 126 : 0 | board 127 : 0 | board 128 : 0 | board 129 : 0 | 
+board 130 : 0 | board 131 : 0 | board 132 : 0 | board 133 : 0 | board 134 : 0 | board 135 : 0 | board 136 : 0 | board 137 : 0 | board 138 : 0 | board 139 : 0 | 
+board 140 : 0 | board 141 : 0 | board 142 : 0 | board 143 : 0 | board 144 : 0 | board 145 : 0 | board 146 : 0 | board 147 : 0 | board 148 : 0 | board 149 : 0 | 
+board 150 : 0 | board 151 : 0 | board 152 : 0 | board 153 : 0 | board 154 : 0 | board 155 : 0 | board 156 : 0 | board 157 : 0 | board 158 : 0 | board 159 : 0 | 
+board 160 : 0 | board 161 : 0 | board 162 : 0 | board 163 : 0 | board 164 : 0 | board 165 : 0 | board 166 : 0 | board 167 : 0 | board 168 : 0 | board 169 : 0 | 
+board 170 : 0 | board 171 : 0 | board 172 : 0 | board 173 : 0 | board 174 : 0 | board 175 : 0 | board 176 : 0 | board 177 : 0 | board 178 : 0 | board 179 : 0 | 
+board 180 : 0 | board 181 : 0 | board 182 : 0 | board 183 : 0 | board 184 : 0 | board 185 : 0 | board 186 : 0 | board 187 : 0 | board 188 : 0 | board 189 : 0 | 
+board 190 : 0 | board 191 : 0 | board 192 : 0 | board 193 : 0 | board 194 : 0 | board 195 : 0 | board 196 : 0 | board 197 : 0 | board 198 : 0 | board 199 : 0 | 
+board 200 : 0 | board 201 : 0 | board 202 : 0 | board 203 : 0 | board 204 : 0 | board 205 : 0 | board 206 : 0 | board 207 : 0 | board 208 : 0 | board 209 : 0 | 
+board 210 : 0 | board 211 : 0 | board 212 : 0 | board 213 : 0 | board 214 : 0 | board 215 : 0 | board 216 : 0 | board 217 : 0 | board 218 : 0 | board 219 : 0 | 
+board 220 : 0 | board 221 : 0 | board 222 : 0 | board 223 : 0 | board 224 : 0 | 
+================================opponent_turn==================================
+board   0 : 0 | board   1 : 0 | board   2 : 0 | board   3 : 0 | board   4 : 0 | board   5 : 0 | board   6 : 0 | board   7 : 0 | board   8 : 0 | board   9 : 0 | 
+board  10 : 0 | board  11 : 0 | board  12 : 0 | board  13 : 0 | board  14 : 0 | board  15 : 0 | board  16 : 0 | board  17 : 0 | board  18 : 0 | board  19 : 0 | 
+board  20 : 0 | board  21 : 0 | board  22 : 0 | board  23 : 0 | board  24 : 0 | board  25 : 0 | board  26 : 0 | board  27 : 0 | board  28 : 0 | board  29 : 0 | 
+board  30 : 0 | board  31 : 0 | board  32 : 0 | board  33 : 0 | board  34 : 0 | board  35 : 0 | board  36 : 0 | board  37 : 0 | board  38 : 0 | board  39 : 0 | 
+board  40 : 0 | board  41 : 0 | board  42 : 0 | board  43 : 0 | board  44 : 0 | board  45 : 0 | board  46 : 0 | board  47 : 0 | board  48 : 0 | board  49 : 0 | 
+board  50 : 0 | board  51 : 0 | board  52 : 0 | board  53 : 0 | board  54 : 0 | board  55 : 0 | board  56 : 0 | board  57 : 0 | board  58 : 0 | board  59 : 0 | 
+board  60 : 0 | board  61 : 0 | board  62 : 0 | board  63 : 0 | board  64 : 0 | board  65 : 0 | board  66 : 0 | board  67 : 0 | board  68 : 0 | board  69 : 0 | 
+board  70 : 0 | board  71 : 0 | board  72 : 0 | board  73 : 0 | board  74 : 0 | board  75 : 0 | board  76 : 0 | board  77 : 0 | board  78 : 0 | board  79 : 0 | 
+board  80 : 0 | board  81 : 0 | board  82 : 0 | board  83 : 0 | board  84 : 0 | board  85 : 0 | board  86 : 0 | board  87 : 0 | board  88 : 0 | board  89 : 0 | 
+board  90 : 0 | board  91 : 0 | board  92 : 0 | board  93 : 0 | board  94 : 0 | board  95 : 0 | board  96 : 0 | board  97 : 0 | board  98 : 0 | board  99 : 0 | 
+board 100 : 0 | board 101 : 0 | board 102 : 0 | board 103 : 0 | board 104 : 0 | board 105 : 0 | board 106 : 0 | board 107 : 0 | board 108 : 0 | board 109 : 0 | 
+board 110 : 0 | board 111 : 0 | board 112 : 0 | board 113 : 0 | board 114 : 0 | board 115 : 0 | board 116 : 0 | board 117 : 0 | board 118 : 0 | board 119 : 0 | 
+board 120 : 0 | board 121 : 0 | board 122 : 0 | board 123 : 0 | board 124 : 0 | board 125 : 0 | board 126 : 0 | board 127 : 0 | board 128 : 0 | board 129 : 0 | 
+board 130 : 0 | board 131 : 0 | board 132 : 0 | board 133 : 0 | board 134 : 0 | board 135 : 0 | board 136 : 0 | board 137 : 0 | board 138 : 0 | board 139 : 0 | 
+board 140 : 0 | board 141 : 0 | board 142 : 0 | board 143 : 0 | board 144 : 0 | board 145 : 0 | board 146 : 0 | board 147 : 0 | board 148 : 0 | board 149 : 0 | 
+board 150 : 0 | board 151 : 0 | board 152 : 0 | board 153 : 0 | board 154 : 0 | board 155 : 0 | board 156 : 0 | board 157 : 0 | board 158 : 0 | board 159 : 0 | 
+board 160 : 0 | board 161 : 0 | board 162 : 0 | board 163 : 0 | board 164 : 0 | board 165 : 0 | board 166 : 0 | board 167 : 0 | board 168 : 0 | board 169 : 0 | 
+board 170 : 0 | board 171 : 0 | board 172 : 0 | board 173 : 0 | board 174 : 0 | board 175 : 0 | board 176 : 0 | board 177 : 0 | board 178 : 0 | board 179 : 0 | 
+board 180 : 0 | board 181 : 0 | board 182 : 0 | board 183 : 0 | board 184 : 0 | board 185 : 0 | board 186 : 0 | board 187 : 0 | board 188 : 0 | board 189 : 0 | 
+board 190 : 0 | board 191 : 0 | board 192 : 0 | board 193 : 0 | board 194 : 0 | board 195 : 0 | board 196 : 0 | board 197 : 0 | board 198 : 0 | board 199 : 0 | 
+board 200 : 0 | board 201 : 0 | board 202 : 0 | board 203 : 0 | board 204 : 0 | board 205 : 0 | board 206 : 0 | board 207 : 0 | board 208 : 0 | board 209 : 0 | 
+board 210 : 0 | board 211 : 0 | board 212 : 0 | board 213 : 0 | board 214 : 0 | board 215 : 0 | board 216 : 0 | board 217 : 0 | board 218 : 0 | board 219 : 0 | 
+board 220 : 0 | board 221 : 0 | board 222 : 0 | board 223 : 0 | board 224 : 0 | 
+me関数が呼び出されたゾ
+board=76
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=77
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=107
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=105
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=108
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=18
+===print now action_arr(me)===
+ [ 1,  ] 
+opponent関数が呼び出されたゾ
+board=19
+===print now action_arr(opponent)===
+ [ 1,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=4
+負けたぞ！
+me関数が呼び出されたゾ
+board=22
+===print now action_arr(me)===
+ [ 1,  2,  ] 
+opponent関数が呼び出されたゾ
+board=23
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=8
+負けたぞ！
+me関数が呼び出されたゾ
+board=38
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=31
+===print now action_arr(opponent)===
+ [ 1,  ] 
+me関数が呼び出されたゾ
+board=46
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=49
+===print now action_arr(opponent)===
+ [ 1,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=4
+負けたぞ！
+me関数が呼び出されたゾ
+board=52
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=46
+===print now action_arr(opponent)===
+ [ 1,  ] 
+me関数が呼び出されたゾ
+board=61
+===print now action_arr(me)===
+ [ 1,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=60
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=106
+===print now action_arr(opponent)===
+ [ 1,  2,  ] 
+me関数が呼び出されたゾ
+board=121
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=120
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=122
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=17
+===print now action_arr(me)===
+ [ 1,  ] 
+opponent関数が呼び出されたゾ
+board=18
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=63
+===print now action_arr(me)===
+ [ 1,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=60
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=108
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=138
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=33
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=30
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=78
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=123
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=120
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=124
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=19
+===print now action_arr(me)===
+ [ 1,  ] 
+opponent関数が呼び出されたゾ
+board=15
+勝ったぞ！
+me関数が呼び出されたゾ
+board=64
+===print now action_arr(me)===
+ [ 1,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=60
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=109
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=19
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=49
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=45
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=94
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=19
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=34
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=30
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=79
+===print now action_arr(opponent)===
+ [ 1,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=19
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=82
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=83
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=23
+===print now action_arr(me)===
+ [ 1,  2,  ] 
+opponent関数が呼び出されたゾ
+board=16
+===print now action_arr(opponent)===
+ [ 1,  ] 
+me関数が呼び出されたゾ
+board=31
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=33
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=3
+負けたぞ！
+me関数が呼び出されたゾ
+board=36
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=38
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=8
+負けたぞ！
+me関数が呼び出されたゾ
+board=53
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=46
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=59
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=14
+負けたぞ！
+me関数が呼び出されたゾ
+board=49
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=98
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=23
+ループしたぞ
+me関数が呼び出されたゾ
+board=38
+ループしたぞ
+me関数が呼び出されたゾ
+board=113
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=106
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=119
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=29
+===print now action_arr(me)===
+ [ 1,  ] 
+opponent関数が呼び出されたゾ
+board=19
+ループしたぞ
+me関数が呼び出されたゾ
+board=59
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=49
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=104
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=29
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=44
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=34
+===print now action_arr(opponent)===
+ [ 1,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=4
+負けたぞ！
+me関数が呼び出されたゾ
+board=37
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=31
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=42
+===print now action_arr(opponent)===
+ [ 1,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=12
+負けたぞ！
+me関数が呼び出されたゾ
+board=33
+ループしたぞ
+me関数が呼び出されたゾ
+board=41
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=32
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=62
+===print now action_arr(me)===
+ [ 1,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=60
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=107
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=17
+ループしたぞ
+me関数が呼び出されたゾ
+board=182
+===print now action_arr(me)===
+ [ 1,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=180
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=47
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=2
+負けたぞ！
+me関数が呼び出されたゾ
+board=50
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=53
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=8
+負けたぞ！
+me関数が呼び出されたゾ
+board=68
+===print now action_arr(me)===
+ [ 1,  2,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=61
+===print now action_arr(opponent)===
+ [ 1,  ] 
+me関数が呼び出されたゾ
+board=1
+負けたぞ！
+opponent関数が呼び出されたゾ
+board=64
+===print now action_arr(opponent)===
+ [ 1,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=4
+負けたぞ！
+me関数が呼び出されたゾ
+board=67
+===print now action_arr(me)===
+ [ 1,  2,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=61
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=63
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=3
+負けたぞ！
+me関数が呼び出されたゾ
+board=66
+===print now action_arr(me)===
+ [ 1,  2,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=61
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=62
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=2
+負けたぞ！
+me関数が呼び出されたゾ
+board=65
+===print now action_arr(me)===
+ [ 1,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=61
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=110
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=125
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=121
+===print now action_arr(opponent)===
+ [ 1,  2,  ] 
+me関数が呼び出されたゾ
+board=16
+===print now action_arr(me)===
+ [ 1,  ] 
+opponent関数が呼び出されたゾ
+board=17
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=47
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=45
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=92
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=122
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=120
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=123
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=18
+ループしたぞ
+me関数が呼び出されたゾ
+board=213
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=210
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=63
+ループしたぞ
+me関数が呼び出されたゾ
+board=126
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=121
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=122
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=127
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=22
+ループしたぞ
+me関数が呼び出されたゾ
+board=217
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=211
+===print now action_arr(opponent)===
+ [ 1,  ] 
+me関数が呼び出されたゾ
+board=61
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=213
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=63
+ループしたぞ
+me関数が呼び出されたゾ
+board=216
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=211
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=212
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=62
+ループしたぞ
+me関数が呼び出されたゾ
+board=215
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=211
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=65
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=5
+負けたぞ！
+me関数が呼び出されたゾ
+board=66
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=66
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=6
+負けたぞ！
+me関数が呼び出されたゾ
+board=6
+負けたぞ！
+me関数が呼び出されたゾ
+board=70
+===print now action_arr(me)===
+ [ 1,  2,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=62
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=63
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=115
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=25
+===print now action_arr(me)===
+ [ 1,  2,  ] 
+opponent関数が呼び出されたゾ
+board=26
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=11
+負けたぞ！
+me関数が呼び出されたゾ
+board=56
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=47
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=49
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=101
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=26
+===print now action_arr(me)===
+ [ 1,  2,  ] 
+opponent関数が呼び出されたゾ
+board=17
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=28
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=13
+負けたぞ！
+me関数が呼び出されたゾ
+board=73
+===print now action_arr(me)===
+ [ 1,  2,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=63
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=64
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=118
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=28
+===print now action_arr(me)===
+ [ 1,  2,  ] 
+opponent関数が呼び出されたゾ
+board=18
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=29
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=14
+負けたぞ！
+me関数が呼び出されたゾ
+board=19
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=58
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=48
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=3
+負けたぞ！
+me関数が呼び出されたゾ
+board=51
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=46
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=56
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=11
+負けたぞ！
+me関数が呼び出されたゾ
+board=11
+負けたぞ！
+me関数が呼び出されたゾ
+board=49
+ループしたぞ
+me関数が呼び出されたゾ
+board=47
+ループしたぞ
+me関数が呼び出されたゾ
+board=57
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=48
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=102
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=27
+===print now action_arr(me)===
+ [ 1,  ] 
+opponent関数が呼び出されたゾ
+board=28
+ループしたぞ
+me関数が呼び出されたゾ
+board=177
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=168
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=33
+ループしたぞ
+me関数が呼び出されたゾ
+board=63
+ループしたぞ
+me関数が呼び出されたゾ
+board=171
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=166
+===print now action_arr(opponent)===
+ [ 1,  2,  ] 
+me関数が呼び出されたゾ
+board=31
+ループしたぞ
+me関数が呼び出されたゾ
+board=196
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=195
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=199
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=49
+ループしたぞ
+me関数が呼び出されたゾ
+board=64
+ループしたぞ
+me関数が呼び出されたゾ
+board=202
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=196
+===print now action_arr(opponent)===
+ [ 1,  2,  ] 
+me関数が呼び出されたゾ
+board=46
+ループしたぞ
+me関数が呼び出されたゾ
+board=211
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=210
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=61
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=198
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=48
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=45
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=93
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=18
+ループしたぞ
+me関数が呼び出されたゾ
+board=168
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=165
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=165
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=63
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=33
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=183
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=48
+ループしたぞ
+me関数が呼び出されたゾ
+board=186
+===print now action_arr(me)===
+ [ 1,  2,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=181
+===print now action_arr(opponent)===
+ [ 1,  ] 
+me関数が呼び出されたゾ
+board=196
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=191
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=184
+===print now action_arr(me)===
+ [ 1,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=180
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=49
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=169
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=34
+ループしたぞ
+me関数が呼び出されたゾ
+board=64
+ループしたぞ
+me関数が呼び出されたゾ
+board=172
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=166
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=168
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=166
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=177
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=42
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=33
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=87
+===print now action_arr(opponent)===
+ [ 1,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=132
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=123
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=133
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=28
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=73
+ループしたぞ
+me関数が呼び出されたゾ
+board=28
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=223
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=213
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=214
+===print now action_arr(opponent)===
+ [ 1,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=64
+ループしたぞ
+me関数が呼び出されたゾ
+board=217
+ループしたぞ
+me関数が呼び出されたゾ
+board=219
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=212
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=69
+===print now action_arr(opponent)===
+ [ 1,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=9
+負けたぞ！
+me関数が呼び出されたゾ
+board=71
+===print now action_arr(me)===
+ [ 1,  2,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=62
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=64
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=116
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=26
+ループしたぞ
+me関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=26
+ループしたぞ
+me関数が呼び出されたゾ
+board=191
+===print now action_arr(me)===
+ [ 1,  2,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=182
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=47
+ループしたぞ
+me関数が呼び出されたゾ
+board=185
+===print now action_arr(me)===
+ [ 1,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=188
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=53
+ループしたぞ
+me関数が呼び出されたゾ
+board=203
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=196
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=199
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=196
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=209
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=59
+ループしたぞ
+me関数が呼び出されたゾ
+board=74
+===print now action_arr(me)===
+ [ 1,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=64
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=119
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=149
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=44
+ループしたぞ
+me関数が呼び出されたゾ
+board=139
+===print now action_arr(me)===
+ [ 1,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=135
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=169
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=109
+ループしたぞ
+me関数が呼び出されたゾ
+board=199
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=195
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=195
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=64
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=49
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=68
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=8
+負けたぞ！
+me関数が呼び出されたゾ
+board=8
+負けたぞ！
+me関数が呼び出されたゾ
+board=64
+ループしたぞ
+me関数が呼び出されたゾ
+board=61
+ループしたぞ
+me関数が呼び出されたゾ
+board=70
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=53
+ループしたぞ
+me関数が呼び出されたゾ
+board=184
+ループしたぞ
+me関数が呼び出されたゾ
+board=181
+===print now action_arr(me)===
+ [ 1,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=184
+===print now action_arr(opponent)===
+ [ 1,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=49
+ループしたぞ
+me関数が呼び出されたゾ
+board=187
+===print now action_arr(me)===
+ [ 1,  2,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=181
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=193
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=58
+ループしたぞ
+me関数が呼び出されたゾ
+board=58
+ループしたぞ
+me関数が呼び出されたゾ
+board=184
+ループしたぞ
+me関数が呼び出されたゾ
+board=183
+===print now action_arr(me)===
+ [ 1,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=180
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=48
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=168
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=52
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=7
+負けたぞ！
+me関数が呼び出されたゾ
+board=67
+ループしたぞ
+me関数が呼び出されたゾ
+board=58
+ループしたぞ
+me関数が呼び出されたゾ
+board=53
+ループしたぞ
+me関数が呼び出されたゾ
+board=54
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=47
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=99
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=129
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=122
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=130
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=25
+ループしたぞ
+me関数が呼び出されたゾ
+board=220
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=212
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=213
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=70
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=10
+負けたぞ！
+me関数が呼び出されたゾ
+board=10
+負けたぞ！
+me関数が呼び出されたゾ
+board=63
+ループしたぞ
+me関数が呼び出されたゾ
+board=62
+ループしたぞ
+me関数が呼び出されたゾ
+board=68
+ループしたぞ
+me関数が呼び出されたゾ
+board=25
+ループしたぞ
+me関数が呼び出されたゾ
+board=205
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=197
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=47
+ループしたぞ
+me関数が呼び出されたゾ
+board=62
+ループしたぞ
+me関数が呼び出されたゾ
+board=200
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=196
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=203
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=53
+ループしたぞ
+me関数が呼び出されたゾ
+board=68
+ループしたぞ
+me関数が呼び出されたゾ
+board=53
+ループしたぞ
+me関数が呼び出されたゾ
+board=218
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=211
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=214
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=68
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=199
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=196
+ループしたぞ
+me関数が呼び出されたゾ
+board=205
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=65
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=50
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=65
+ループしたぞ
+me関数が呼び出されたゾ
+board=51
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=198
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=198
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=70
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=55
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=10
+負けたぞ！
+me関数が呼び出されたゾ
+board=10
+負けたぞ！
+me関数が呼び出されたゾ
+board=48
+ループしたぞ
+me関数が呼び出されたゾ
+board=47
+ループしたぞ
+me関数が呼び出されたゾ
+board=53
+ループしたぞ
+me関数が呼び出されたゾ
+board=123
+ループしたぞ
+me関数が呼び出されたゾ
+board=122
+ループしたぞ
+me関数が呼び出されたゾ
+board=128
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=121
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=124
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=121
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=131
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=26
+ループしたぞ
+me関数が呼び出されたゾ
+board=71
+ループしたぞ
+me関数が呼び出されたゾ
+board=26
+ループしたぞ
+me関数が呼び出されたゾ
+board=206
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=199
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=199
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=71
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=11
+負けたぞ！
+me関数が呼び出されたゾ
+board=11
+負けたぞ！
+me関数が呼び出されたゾ
+board=64
+ループしたぞ
+me関数が呼び出されたゾ
+board=62
+ループしたぞ
+me関数が呼び出されたゾ
+board=72
+===print now action_arr(me)===
+ [ 1,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=63
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=117
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=27
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=207
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=198
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=198
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=72
+===print now action_arr(opponent)===
+ [ 1,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=12
+負けたぞ！
+me関数が呼び出されたゾ
+board=63
+ループしたぞ
+me関数が呼び出されたゾ
+board=71
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=57
+===print now action_arr(opponent)===
+ [ 1,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=12
+負けたぞ！
+me関数が呼び出されたゾ
+board=48
+ループしたぞ
+me関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=108
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=105
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=109
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=198
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=123
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=138
+ループしたぞ
+me関数が呼び出されたゾ
+board=116
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=107
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=109
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=107
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=118
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=206
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=71
+ループしたぞ
+me関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=71
+ループしたぞ
+me関数が呼び出されたゾ
+board=199
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=197
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=195
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=195
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=62
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=47
+ループしたぞ
+me関数が呼び出されたゾ
+board=207
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=131
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=146
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=41
+ループしたぞ
+me関数が呼び出されたゾ
+board=176
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=167
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=32
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=34
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=77
+ループしたぞ
+me関数が呼び出されたゾ
+board=212
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=210
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=62
+ループしたぞ
+me関数が呼び出されたゾ
+board=170
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=166
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=172
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=37
+ループしたぞ
+me関数が呼び出されたゾ
+board=67
+ループしたぞ
+me関数が呼び出されたゾ
+board=37
+ループしたぞ
+me関数が呼び出されたゾ
+board=202
+ループしたぞ
+me関数が呼び出されたゾ
+board=178
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=168
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=169
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=168
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=169
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=73
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=13
+負けたぞ！
+me関数が呼び出されたゾ
+board=13
+負けたぞ！
+me関数が呼び出されたゾ
+board=64
+ループしたぞ
+me関数が呼び出されたゾ
+board=63
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=43
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=13
+負けたぞ！
+me関数が呼び出されたゾ
+board=13
+負けたぞ！
+me関数が呼び出されたゾ
+board=34
+ループしたぞ
+me関数が呼び出されたゾ
+board=33
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=193
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=173
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=166
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=169
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=166
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=178
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=43
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=33
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=34
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=88
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=28
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=133
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=123
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=124
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=123
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=134
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=29
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=74
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=124
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=120
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=120
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=64
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=19
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=154
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=34
+ループしたぞ
+me関数が呼び出されたゾ
+board=49
+ループしたぞ
+me関数が呼び出されたゾ
+board=157
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=151
+===print now action_arr(opponent)===
+ [ 1,  2,  ] 
+me関数が呼び出されたゾ
+board=166
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=165
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=168
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=61
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=31
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=181
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=181
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=163
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=43
+ループしたぞ
+me関数が呼び出されたゾ
+board=58
+ループしたぞ
+me関数が呼び出されたゾ
+board=43
+ループしたぞ
+me関数が呼び出されたゾ
+board=58
+ループしたぞ
+me関数が呼び出されたゾ
+board=154
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=150
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=150
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=49
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=34
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=124
+ループしたぞ
+me関数が呼び出されたゾ
+board=153
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=150
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=150
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=48
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=33
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=123
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=151
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 2
+opponent関数が呼び出されたゾ
+board=162
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=42
+ループしたぞ
+me関数が呼び出されたゾ
+board=57
+ループしたぞ
+me関数が呼び出されたゾ
+board=153
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=161
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=152
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=32
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=155
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=158
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=38
+ループしたぞ
+me関数が呼び出されたゾ
+board=53
+ループしたぞ
+me関数が呼び出されたゾ
+board=173
+ループしたぞ
+me関数が呼び出されたゾ
+board=188
+===print now action_arr(me)===
+ [ 1,  2,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=181
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=194
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=59
+ループしたぞ
+me関数が呼び出されたゾ
+board=184
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=53
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=173
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=38
+ループしたぞ
+me関数が呼び出されたゾ
+board=68
+ループしたぞ
+me関数が呼び出されたゾ
+board=38
+ループしたぞ
+me関数が呼び出されたゾ
+board=203
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=169
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=165
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=165
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=64
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=34
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=184
+ループしたぞ
+me関数が呼び出されたゾ
+board=166
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=175
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=167
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=168
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=167
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=178
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=70
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=40
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=10
+負けたぞ！
+me関数が呼び出されたゾ
+board=70
+ループしたぞ
+me関数が呼び出されたゾ
+board=33
+ループしたぞ
+me関数が呼び出されたゾ
+board=32
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=38
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=190
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=55
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=47
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=48
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=100
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=25
+ループしたぞ
+me関数が呼び出されたゾ
+board=175
+ループしたぞ
+me関数が呼び出されたゾ
+board=130
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=122
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=123
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=131
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=132
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=27
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=222
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=213
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=72
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=123
+ループしたぞ
+me関数が呼び出されたゾ
+board=131
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=122
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=124
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=122
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=133
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=71
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=26
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=161
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=41
+ループしたぞ
+me関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=41
+ループしたぞ
+me関数が呼び出されたゾ
+board=206
+ループしたぞ
+me関数が呼び出されたゾ
+board=154
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=152
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=150
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=154
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=47
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=32
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=122
+ループしたぞ
+me関数が呼び出されたゾ
+board=162
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=153
+===print now action_arr(opponent)===
+ [ 1,  2,  7,  ] 
+me関数が呼び出されたゾ
+board=33
+ループしたぞ
+me関数が呼び出されたゾ
+board=48
+ループしたぞ
+me関数が呼び出されたゾ
+board=156
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=151
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 2
+opponent関数が呼び出されたゾ
+board=161
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=158
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=160
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=40
+===print now action_arr(me)===
+ [ 1,  2,  7,  ] 
+opponent関数が呼び出されたゾ
+board=32
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=43
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=85
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=130
+ループしたぞ
+me関数が呼び出されたゾ
+board=115
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=107
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=108
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=116
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=117
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=205
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=55
+ループしたぞ
+me関数が呼び出されたゾ
+board=70
+ループしたぞ
+me関数が呼び出されたゾ
+board=55
+ループしたぞ
+me関数が呼び出されたゾ
+board=70
+ループしたぞ
+me関数が呼び出されたゾ
+board=198
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=195
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=195
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=63
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=48
+ループしたぞ
+me関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=203
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=130
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=145
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=40
+ループしたぞ
+me関数が呼び出されたゾ
+board=175
+ループしたぞ
+me関数が呼び出されたゾ
+board=138
+===print now action_arr(me)===
+ [ 1,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=135
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=168
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=108
+ループしたぞ
+me関数が呼び出されたゾ
+board=137
+===print now action_arr(me)===
+ [ 1,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=139
+===print now action_arr(opponent)===
+ [ 1,  7,  8,  ] 
+me関数が呼び出されたゾ
+board=34
+ループしたぞ
+me関数が呼び出されたゾ
+board=142
+===print now action_arr(me)===
+ [ 1,  2,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=136
+===print now action_arr(opponent)===
+ [ 1,  ] 
+me関数が呼び出されたゾ
+board=151
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=154
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=153
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=46
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=31
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=121
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=147
+===print now action_arr(opponent)===
+ [ 1,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=42
+ループしたぞ
+me関数が呼び出されたゾ
+board=138
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=146
+===print now action_arr(me)===
+ [ 1,  2,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=137
+===print now action_arr(opponent)===
+ [ 1,  7,  ] 
+me関数が呼び出されたゾ
+board=167
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=165
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=169
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=62
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=32
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=182
+ループしたぞ
+me関数が呼び出されたゾ
+board=140
+===print now action_arr(me)===
+ [ 1,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=142
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=37
+ループしたぞ
+me関数が呼び出されたゾ
+board=157
+ループしたぞ
+me関数が呼び出されたゾ
+board=148
+===print now action_arr(me)===
+ [ 1,  2,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=138
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=139
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=178
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=118
+ループしたぞ
+me関数が呼び出されたゾ
+board=143
+===print now action_arr(me)===
+ [ 1,  2,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=136
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=148
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=43
+ループしたぞ
+me関数が呼び出されたゾ
+board=43
+ループしたぞ
+me関数が呼び出されたゾ
+board=139
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=138
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=173
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=113
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=23
+ループしたぞ
+me関数が呼び出されたゾ
+board=53
+ループしたぞ
+me関数が呼び出されたゾ
+board=128
+ループしたぞ
+me関数が呼び出されたゾ
+board=158
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=151
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 2
+opponent関数が呼び出されたゾ
+board=164
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=44
+ループしたぞ
+me関数が呼び出されたゾ
+board=59
+ループしたぞ
+me関数が呼び出されたゾ
+board=154
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=151
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 2
+opponent関数が呼び出されたゾ
+board=163
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=53
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=38
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=128
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=23
+ループしたぞ
+me関数が呼び出されたゾ
+board=68
+ループしたぞ
+me関数が呼び出されたゾ
+board=23
+ループしたぞ
+me関数が呼び出されたゾ
+board=173
+ループしたぞ
+me関数が呼び出されたゾ
+board=124
+ループしたぞ
+me関数が呼び出されたゾ
+board=121
+ループしたぞ
+me関数が呼び出されたゾ
+board=130
+ループしたぞ
+me関数が呼び出されたゾ
+board=109
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=105
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=105
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=199
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=124
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=139
+ループしたぞ
+me関数が呼び出されたゾ
+board=106
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=109
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=107
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=196
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=121
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=136
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=115
+ループしたぞ
+me関数が呼び出されたゾ
+board=144
+===print now action_arr(me)===
+ [ 1,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=146
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=174
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=39
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=41
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=11
+負けたぞ！
+me関数が呼び出されたゾ
+board=71
+ループしたぞ
+me関数が呼び出されたゾ
+board=34
+ループしたぞ
+me関数が呼び出されたゾ
+board=32
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=42
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=84
+===print now action_arr(opponent)===
+ [ 1,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=114
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=107
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=115
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=204
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=54
+ループしたぞ
+me関数が呼び出されたゾ
+board=69
+===print now action_arr(me)===
+ [ 1,  7,  8,  ] 
+opponent関数が呼び出されたゾ
+board=62
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=114
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=24
+===print now action_arr(me)===
+ [ 1,  ] 
+opponent関数が呼び出されたゾ
+board=25
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=70
+ループしたぞ
+me関数が呼び出されたゾ
+board=55
+ループしたぞ
+me関数が呼び出されたゾ
+board=18
+ループしたぞ
+me関数が呼び出されたゾ
+board=17
+ループしたぞ
+me関数が呼び出されたゾ
+board=23
+ループしたぞ
+me関数が呼び出されたゾ
+board=189
+===print now action_arr(me)===
+ [ 1,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=182
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=54
+===print now action_arr(opponent)===
+ [ 1,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=9
+負けたぞ！
+me関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=52
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=174
+ループしたぞ
+me関数が呼び出されたゾ
+board=116
+ループしたぞ
+me関数が呼び出されたゾ
+board=112
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=106
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=118
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=113
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=115
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=202
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=52
+ループしたぞ
+me関数が呼び出されたゾ
+board=67
+ループしたぞ
+me関数が呼び出されたゾ
+board=52
+ループしたぞ
+me関数が呼び出されたゾ
+board=217
+ループしたぞ
+me関数が呼び出されたゾ
+board=208
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=198
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=199
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=198
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=199
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=73
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=58
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=13
+負けたぞ！
+me関数が呼び出されたゾ
+board=13
+負けたぞ！
+me関数が呼び出されたゾ
+board=49
+ループしたぞ
+me関数が呼び出されたゾ
+board=48
+ループしたぞ
+me関数が呼び出されたゾ
+board=203
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=204
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=69
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=54
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=127
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=142
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=144
+===print now action_arr(opponent)===
+ [ 1,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=174
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  9,  ] 
+opponent関数が呼び出されたゾ
+board=167
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=176
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=41
+ループしたぞ
+me関数が呼び出されたゾ
+board=71
+ループしたぞ
+me関数が呼び出されたゾ
+board=41
+ループしたぞ
+me関数が呼び出されたゾ
+board=221
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=212
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=214
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=71
+ループしたぞ
+me関数が呼び出されたゾ
+board=169
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=167
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=177
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=69
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=39
+===print now action_arr(opponent)===
+ [ 1,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=69
+ループしたぞ
+me関数が呼び出されたゾ
+board=41
+ループしたぞ
+me関数が呼び出されたゾ
+board=37
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=189
+===print now action_arr(opponent)===
+ [ 1,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=54
+ループしたぞ
+me関数が呼び出されたゾ
+board=191
+ループしたぞ
+me関数が呼び出されたゾ
+board=187
+ループしたぞ
+me関数が呼び出されたゾ
+board=146
+ループしたぞ
+me関数が呼び出されたゾ
+board=142
+ループしたぞ
+me関数が呼び出されたゾ
+board=206
+ループしたぞ
+me関数が呼び出されたゾ
+board=202
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=129
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=24
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=204
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=131
+ループしたぞ
+me関数が呼び出されたゾ
+board=127
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=121
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=123
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=128
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=130
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=67
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=7
+負けたぞ！
+me関数が呼び出されたゾ
+board=7
+負けたぞ！
+me関数が呼び出されたゾ
+board=73
+ループしたぞ
+me関数が呼び出されたゾ
+board=68
+ループしたぞ
+me関数が呼び出されたゾ
+board=69
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=22
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=67
+ループしたぞ
+me関数が呼び出されたゾ
+board=37
+ループしたぞ
+me関数が呼び出されたゾ
+board=28
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=23
+ループしたぞ
+me関数が呼び出されたゾ
+board=24
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=157
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=37
+ループしたぞ
+me関数が呼び出されたゾ
+board=52
+ループしたぞ
+me関数が呼び出されたゾ
+board=172
+ループしたぞ
+me関数が呼び出されたゾ
+board=187
+ループしたぞ
+me関数が呼び出されたゾ
+board=163
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=153
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=154
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=153
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=154
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=58
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=43
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=133
+ループしたぞ
+me関数が呼び出されたゾ
+board=158
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=159
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=152
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=161
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=54
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=39
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=129
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=144
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=86
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=77
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=88
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=101
+ループしたぞ
+me関数が呼び出されたゾ
+board=82
+ループしたぞ
+me関数が呼び出されたゾ
+board=219
+ループしたぞ
+me関数が呼び出されたゾ
+board=176
+ループしたぞ
+me関数が呼び出されたゾ
+board=172
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=114
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=170
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=35
+===print now action_arr(me)===
+ [ 1,  7,  ] 
+opponent関数が呼び出されたゾ
+board=37
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=7
+負けたぞ！
+me関数が呼び出されたゾ
+board=52
+ループしたぞ
+me関数が呼び出されたゾ
+board=43
+ループしたぞ
+me関数が呼び出されたゾ
+board=38
+ループしたぞ
+me関数が呼び出されたゾ
+board=39
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 7
+opponent関数が呼び出されたゾ
+board=80
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=95
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=97
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=22
+ループしたぞ
+me関数が呼び出されたゾ
+board=172
+ループしたぞ
+me関数が呼び出されたゾ
+board=112
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=142
+ループしたぞ
+me関数が呼び出されたゾ
+board=103
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=93
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=94
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=93
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=104
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=163
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=118
+ループしたぞ
+me関数が呼び出されたゾ
+board=98
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=91
+===print now action_arr(opponent)===
+ [ 1,  2,  ] 
+me関数が呼び出されたゾ
+board=106
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=136
+===print now action_arr(me)===
+ [ 1,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=138
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=166
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=106
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=103
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=28
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=43
+ループしたぞ
+me関数が呼び出されたゾ
+board=28
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=178
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=94
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=90
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=90
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=154
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=109
+ループしたぞ
+me関数が呼び出されたゾ
+board=93
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=90
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=94
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=153
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=108
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=91
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=101
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=158
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=113
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=99
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=101
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=100
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=159
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=39
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 7
+me関数が呼び出されたゾ
+board=204
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=161
+ループしたぞ
+me関数が呼び出されたゾ
+board=157
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=114
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=96
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=126
+ループしたぞ
+me関数が呼び出されたゾ
+board=156
+ループしたぞ
+me関数が呼び出されたゾ
+board=111
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=106
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=116
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=112
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=22
+ループしたぞ
+me関数が呼び出されたゾ
+board=202
+ループしたぞ
+me関数が呼び出されたゾ
+board=127
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=157
+ループしたぞ
+me関数が呼び出されたゾ
+board=118
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=108
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=109
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=108
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=119
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=208
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=58
+ループしたぞ
+me関数が呼び出されたゾ
+board=73
+ループしたぞ
+me関数が呼び出されたゾ
+board=58
+ループしたぞ
+me関数が呼び出されたゾ
+board=73
+ループしたぞ
+me関数が呼び出されたゾ
+board=199
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=198
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=133
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=148
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=113
+ループしたぞ
+me関数が呼び出されたゾ
+board=114
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=114
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=201
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=51
+ループしたぞ
+me関数が呼び出されたゾ
+board=66
+ループしたぞ
+me関数が呼び出されたゾ
+board=51
+ループしたぞ
+me関数が呼び出されたゾ
+board=216
+ループしたぞ
+me関数が呼び出されたゾ
+board=205
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=202
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=126
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=21
+===print now action_arr(me)===
+ [ 1,  2,  ] 
+opponent関数が呼び出されたゾ
+board=22
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=24
+===print now action_arr(opponent)===
+ [ 1,  5,  7,  ] 
+me関数が呼び出されたゾ
+board=54
+ループしたぞ
+me関数が呼び出されたゾ
+board=26
+ループしたぞ
+me関数が呼び出されたゾ
+board=22
+ループしたぞ
+me関数が呼び出されたゾ
+board=201
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=196
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=196
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=206
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=66
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=51
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=6
+負けたぞ！
+me関数が呼び出されたゾ
+board=66
+ループしたぞ
+me関数が呼び出されたゾ
+board=55
+ループしたぞ
+me関数が呼び出されたゾ
+board=52
+ループしたぞ
+me関数が呼び出されたゾ
+board=21
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=171
+ループしたぞ
+me関数が呼び出されたゾ
+board=130
+ループしたぞ
+me関数が呼び出されたゾ
+board=127
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=141
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=171
+ループしたぞ
+me関数が呼び出されたゾ
+board=156
+ループしたぞ
+me関数が呼び出されたゾ
+board=145
+===print now action_arr(me)===
+ [ 1,  2,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=137
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=148
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=175
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+me関数が呼び出されたゾ
+board=40
+ループしたぞ
+me関数が呼び出されたゾ
+board=70
+ループしたぞ
+me関数が呼び出されたゾ
+board=40
+ループしたぞ
+me関数が呼び出されたゾ
+board=220
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=168
+ループしたぞ
+me関数が呼び出されたゾ
+board=167
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=173
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=115
+ループしたぞ
+me関数が呼び出されたゾ
+board=142
+ループしたぞ
+me関数が呼び出されたゾ
+board=141
+===print now action_arr(me)===
+ [ 1,  2,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=143
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=38
+ループしたぞ
+me関数が呼び出されたゾ
+board=158
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=139
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=136
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=145
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=145
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=171
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=36
+ループしたぞ
+me関数が呼び出されたゾ
+board=216
+ループしたぞ
+me関数が呼び出されたゾ
+board=36
+ループしたぞ
+me関数が呼び出されたゾ
+board=201
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=175
+ループしたぞ
+me関数が呼び出されたゾ
+board=172
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=111
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=21
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=186
+ループしたぞ
+me関数が呼び出されたゾ
+board=126
+ループしたぞ
+me関数が呼び出されたゾ
+board=156
+ループしたぞ
+me関数が呼び出されたゾ
+board=115
+ループしたぞ
+me関数が呼び出されたゾ
+board=112
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=100
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=92
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=103
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=101
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=102
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=160
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=115
+ループしたぞ
+me関数が呼び出されたゾ
+board=97
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=91
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=102
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=98
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=100
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=157
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=112
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=155
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=170
+ループしたぞ
+me関数が呼び出されたゾ
+board=185
+ループしたぞ
+me関数が呼び出されたゾ
+board=156
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=110
+ループしたぞ
+me関数が呼び出されたゾ
+board=81
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=82
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=127
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=97
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=88
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=78
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=89
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=29
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=79
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=75
+勝ったぞ！
+opponent関数が呼び出されたゾ
+board=94
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=103
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=83
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=76
+===print now action_arr(opponent)===
+ [ 1,  ] 
+me関数が呼び出されたゾ
+board=91
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=93
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=92
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=151
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 2
+opponent関数が呼び出されたゾ
+board=106
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=86
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  9,  ] 
+me関数が呼び出されたゾ
+board=26
+ループしたぞ
+me関数が呼び出されたゾ
+board=116
+ループしたぞ
+me関数が呼び出されたゾ
+board=79
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=77
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=78
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=92
+ループしたぞ
+me関数が呼び出されたゾ
+board=87
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=88
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=102
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=98
+ループしたぞ
+me関数が呼び出されたゾ
+board=84
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=85
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=99
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=84
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=96
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=200
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=171
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=110
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=149
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=176
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=116
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=172
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=112
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=144
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=167
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=107
+ループしたぞ
+me関数が呼び出されたゾ
+board=143
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=78
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=79
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=93
+ループしたぞ
+me関数が呼び出されたゾ
+board=77
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=83
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=55
+ループしたぞ
+me関数が呼び出されたゾ
+board=40
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=205
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=153
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=152
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=158
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=51
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=36
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=66
+ループしたぞ
+me関数が呼び出されたゾ
+board=51
+ループしたぞ
+me関数が呼び出されたゾ
+board=40
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=37
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=126
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=153
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=57
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=42
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=132
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=70
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=25
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=160
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=160
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  7,  ] 
+opponent関数が呼び出されたゾ
+board=152
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=153
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=152
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=163
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=55
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=40
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=130
+ループしたぞ
+me関数が呼び出されたゾ
+board=93
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=92
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=94
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=93
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=152
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=107
+ループしたぞ
+me関数が呼び出されたゾ
+board=98
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=55
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=183
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=182
+ループしたぞ
+me関数が呼び出されたゾ
+board=188
+ループしたぞ
+me関数が呼び出されたゾ
+board=154
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=151
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=160
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=157
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=50
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=35
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=50
+ループしたぞ
+me関数が呼び出されたゾ
+board=36
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=125
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=20
+===print now action_arr(me)===
+ [ 1,  ] 
+opponent関数が呼び出されたゾ
+board=21
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=51
+ループしたぞ
+me関数が呼び出されたゾ
+board=36
+ループしたぞ
+me関数が呼び出されたゾ
+board=25
+ループしたぞ
+me関数が呼び出されたゾ
+board=22
+ループしたぞ
+me関数が呼び出されたゾ
+board=170
+ループしたぞ
+me関数が呼び出されたゾ
+board=126
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=154
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=152
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=164
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=56
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=41
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=131
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=52
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=37
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=127
+ループしたぞ
+me関数が呼び出されたゾ
+board=159
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=73
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=28
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=163
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=79
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=78
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=73
+ループしたぞ
+me関数が呼び出されたゾ
+board=43
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=73
+ループしたぞ
+me関数が呼び出されたゾ
+board=169
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=168
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=68
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=38
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=188
+ループしたぞ
+me関数が呼び出されたゾ
+board=174
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=65
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=35
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=185
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=200
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=186
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=169
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=167
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=179
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=44
+ループしたぞ
+me関数が呼び出されたゾ
+board=74
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=169
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=71
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=41
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=191
+ループしたぞ
+me関数が呼び出されたゾ
+board=139
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=137
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=147
+===print now action_arr(me)===
+ [ 1,  5,  7,  ] 
+opponent関数が呼び出されたゾ
+board=138
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=177
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=117
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=147
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=56
+ループしたぞ
+me関数が呼び出されたゾ
+board=124
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=122
+ループしたぞ
+me関数が呼び出されたゾ
+board=132
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=68
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=23
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=158
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=69
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=24
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=159
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=159
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=101
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=92
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=104
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=92
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=103
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=161
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=116
+ループしたぞ
+me関数が呼び出されたゾ
+board=97
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=172
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=189
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=46
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=166
+ループしたぞ
+me関数が呼び出されたゾ
+board=190
+===print now action_arr(me)===
+ [ 1,  2,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=182
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=183
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=55
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=175
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=50
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=170
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=184
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=56
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=176
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=109
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=107
+ループしたぞ
+me関数が呼び出されたゾ
+board=117
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=108
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=118
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=207
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=57
+ループしたぞ
+me関数が呼び出されたゾ
+board=72
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=198
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=206
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=132
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=147
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=146
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=67
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=73
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=124
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=123
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=72
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=27
+===print now action_arr(opponent)===
+ [ 1,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=72
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=18
+ループしたぞ
+me関数が呼び出されたゾ
+board=26
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=162
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=78
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=86
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=72
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=168
+ループしたぞ
+me関数が呼び出されたゾ
+board=176
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=67
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=37
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=187
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  8,  ] 
+me関数が呼び出されたゾ
+board=52
+ループしたぞ
+me関数が呼び出されたゾ
+board=202
+ループしたぞ
+me関数が呼び出されたゾ
+board=193
+===print now action_arr(me)===
+ [ 1,  2,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=183
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=184
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=58
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=178
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=188
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=189
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=174
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=182
+ループしたぞ
+me関数が呼び出されたゾ
+board=192
+===print now action_arr(me)===
+ [ 1,  5,  8,  ] 
+opponent関数が呼び出されたゾ
+board=183
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=57
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=177
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=51
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=171
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=96
+===print now action_arr(me)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=98
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=100
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=97
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=99
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=156
+===print now action_arr(opponent)===
+ [ 1,  2,  3,  4,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=36
+ループしたぞ
+me関数が呼び出されたゾ
+board=201
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=171
+ループしたぞ
+me関数が呼び出されたゾ
+board=186
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=160
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=157
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=111
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=63
+ループしたぞ
+me関数が呼び出されたゾ
+board=201
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=196
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=208
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=67
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=52
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=204
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=61
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=46
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=167
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=173
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=175
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=66
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=36
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=186
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=51
+ループしたぞ
+me関数が呼び出されたゾ
+board=201
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=190
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=187
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=168
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=72
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=42
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=192
+===print now action_arr(opponent)===
+ [ 1,  5,  8,  ] 
+me関数が呼び出されたゾ
+board=57
+ループしたぞ
+me関数が呼び出されたゾ
+board=183
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=191
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=93
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=101
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=96
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=49
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=103
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=28
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=208
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=109
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=108
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=148
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=19
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=18
+ループしたぞ
+me関数が呼び出されたゾ
+board=41
+ループしたぞ
+me関数が呼び出されたゾ
+board=131
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=161
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=94
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=92
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=102
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  ] 
+opponent関数が呼び出されたゾ
+board=93
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=103
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=162
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=117
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=19
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=17
+ループしたぞ
+me関数が呼び出されたゾ
+board=27
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=27
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=205
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=25
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 2
+me関数が呼び出されたゾ
+board=190
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=108
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=107
+ループしたぞ
+me関数が呼び出されたゾ
+board=113
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=145
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=67
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=67
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=22
+ループしたぞ
+me関数が呼び出されたゾ
+board=172
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=133
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=128
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=129
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=129
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=66
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=21
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=156
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=62
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=17
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=152
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=152
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=95
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=20
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=166
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=126
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=65
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=20
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=35
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 7
+me関数が呼び出されたゾ
+board=21
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=155
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=155
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=111
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=140
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=155
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=141
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=111
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=141
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=112
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=142
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=69
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=113
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=143
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=49
+ループしたぞ
+me関数が呼び出されたゾ
+board=46
+ループしたぞ
+me関数が呼び出されたゾ
+board=55
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=95
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=110
+===print now action_arr(me)===
+ [ 1,  3,  5,  6,  8,  ] 
+opponent関数が呼び出されたゾ
+board=113
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=111
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=200
+===print now action_arr(opponent)===
+ [ 1,  2,  5,  ] 
+me関数が呼び出されたゾ
+board=50
+ループしたぞ
+me関数が呼び出されたゾ
+board=215
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=201
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=125
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=140
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=140
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=96
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=167
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=110
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=137
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 7
+me関数が呼び出されたゾ
+board=35
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 7
+opponent関数が呼び出されたゾ
+board=44
+===print now action_arr(opponent)===
+ [ 1,  5,  ] 
+me関数が呼び出されたゾ
+board=14
+負けたぞ！
+me関数が呼び出されたゾ
+board=34
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=86
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=82
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=39
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 7
+opponent関数が呼び出されたゾ
+board=89
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=94
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=109
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=106
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=116
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=203
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=128
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=143
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=143
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=94
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=91
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=100
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=34
+ループしたぞ
+me関数が呼び出されたゾ
+board=31
+ループしたぞ
+me関数が呼び出されたゾ
+board=40
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=40
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=81
+===print now action_arr(opponent)===
+ [ 1,  3,  5,  6,  ] 
+me関数が呼び出されたゾ
+board=111
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=96
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=85
+===print now action_arr(me)===
+ [ 1,  2,  5,  ] 
+opponent関数が呼び出されたゾ
+board=86
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=87
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=100
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=82
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=76
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=26
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=98
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=79
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=76
+ループしたぞ
+me関数が呼び出されたゾ
+board=85
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=85
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=97
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=84
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=97
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=99
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=112
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=114
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=139
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=127
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=129
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=63
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=18
+ループしたぞ
+opponent関数が呼び出されたゾ
+board=153
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=81
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=141
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=21
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=125
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=61
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=16
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=151
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 2
+me関数が呼び出されたゾ
+board=151
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=136
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=58
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=97
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=54
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=91
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=43
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=83
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=19
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=16
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=25
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 2
+opponent関数が呼び出されたゾ
+board=25
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+me関数が呼び出されたゾ
+board=24
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=198
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+me関数が呼び出されたゾ
+board=111
+ループしたぞ
+min_max[my_turn][board] != 0
+min_max[my_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=197
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=122
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=137
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 7
+me関数が呼び出されたゾ
+board=80
+===print now action_arr(me)===
+ [ 1,  5,  ] 
+opponent関数が呼び出されたゾ
+board=81
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+opponent関数が呼び出されたゾ
+board=95
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+
+
+
+|||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||||
+
+
+opponent関数が呼び出されたゾ
+board=91
+ループしたぞ
+min_max[opponent_turn][board] != 0
+min_max[opponent_turn][board] = 1
+
+~~~~~~~~~~~~~~min_max~~~~~~~~~~~~~~~~~
+
+================================my_turn==================================
+board   0 : 0 | board   1 : 0 | board   2 : 0 | board   3 : 0 | board   4 : 0 | board   5 : 0 | board   6 : 0 | board   7 : 0 | board   8 : 0 | board   9 : 0 | 
+board  10 : 0 | board  11 : 0 | board  12 : 0 | board  13 : 0 | board  14 : 0 | board  15 : 0 | board  16 : 1 | board  17 : 1 | board  18 : 1 | board  19 : 1 | 
+board  20 : 1 | board  21 : 1 | board  22 : 2 | board  23 : 1 | board  24 : 1 | board  25 : 2 | board  26 : 1 | board  27 : 1 | board  28 : 1 | board  29 : 1 | 
+board  30 : 0 | board  31 : 7 | board  32 : 1 | board  33 : 1 | board  34 : 1 | board  35 : 7 | board  36 : 7 | board  37 : 1 | board  38 : 1 | board  39 : 7 | 
+board  40 : 1 | board  41 : 1 | board  42 : 1 | board  43 : 1 | board  44 : 7 | board  45 : 0 | board  46 : 7 | board  47 : 1 | board  48 : 1 | board  49 : 1 | 
+board  50 : 7 | board  51 : 1 | board  52 : 1 | board  53 : 1 | board  54 : 1 | board  55 : 1 | board  56 : 1 | board  57 : 1 | board  58 : 2 | board  59 : 1 | 
+board  60 : 0 | board  61 : 1 | board  62 : 1 | board  63 : 1 | board  64 : 1 | board  65 : 7 | board  66 : 7 | board  67 : 7 | board  68 : 7 | board  69 : 1 | 
+board  70 : 1 | board  71 : 1 | board  72 : 1 | board  73 : 1 | board  74 : 1 | board  75 : 0 | board  76 : 1 | board  77 : 1 | board  78 : 1 | board  79 : 1 | 
+board  80 : 1 | board  81 : 1 | board  82 : 1 | board  83 : 1 | board  84 : 1 | board  85 : 1 | board  86 : 1 | board  87 : 1 | board  88 : 1 | board  89 : 0 | 
+board  90 : 0 | board  91 : 1 | board  92 : 1 | board  93 : 1 | board  94 : 1 | board  95 : 1 | board  96 : 1 | board  97 : 1 | board  98 : 1 | board  99 : 1 | 
+board 100 : 1 | board 101 : 1 | board 102 : 1 | board 103 : 1 | board 104 : 0 | board 105 : 0 | board 106 : 1 | board 107 : 1 | board 108 : 1 | board 109 : 1 | 
+board 110 : 1 | board 111 : 1 | board 112 : 1 | board 113 : 1 | board 114 : 1 | board 115 : 1 | board 116 : 1 | board 117 : 1 | board 118 : 1 | board 119 : 0 | 
+board 120 : 0 | board 121 : 1 | board 122 : 1 | board 123 : 1 | board 124 : 1 | board 125 : 1 | board 126 : 1 | board 127 : 1 | board 128 : 1 | board 129 : 1 | 
+board 130 : 1 | board 131 : 1 | board 132 : 1 | board 133 : 1 | board 134 : 0 | board 135 : 0 | board 136 : 1 | board 137 : 1 | board 138 : 1 | board 139 : 1 | 
+board 140 : 1 | board 141 : 1 | board 142 : 1 | board 143 : 1 | board 144 : 1 | board 145 : 1 | board 146 : 1 | board 147 : 1 | board 148 : 1 | board 149 : 0 | 
+board 150 : 0 | board 151 : 1 | board 152 : 1 | board 153 : 1 | board 154 : 1 | board 155 : 1 | board 156 : 1 | board 157 : 1 | board 158 : 1 | board 159 : 1 | 
+board 160 : 1 | board 161 : 1 | board 162 : 1 | board 163 : 1 | board 164 : 0 | board 165 : 0 | board 166 : 1 | board 167 : 1 | board 168 : 1 | board 169 : 1 | 
+board 170 : 1 | board 171 : 1 | board 172 : 1 | board 173 : 1 | board 174 : 1 | board 175 : 1 | board 176 : 1 | board 177 : 1 | board 178 : 1 | board 179 : 0 | 
+board 180 : 0 | board 181 : 1 | board 182 : 1 | board 183 : 1 | board 184 : 1 | board 185 : 1 | board 186 : 1 | board 187 : 1 | board 188 : 1 | board 189 : 1 | 
+board 190 : 1 | board 191 : 1 | board 192 : 1 | board 193 : 1 | board 194 : 0 | board 195 : 0 | board 196 : 1 | board 197 : 1 | board 198 : 1 | board 199 : 1 | 
+board 200 : 1 | board 201 : 1 | board 202 : 1 | board 203 : 1 | board 204 : 1 | board 205 : 1 | board 206 : 1 | board 207 : 1 | board 208 : 1 | board 209 : 0 | 
+board 210 : 0 | board 211 : 1 | board 212 : 1 | board 213 : 1 | board 214 : 0 | board 215 : 1 | board 216 : 1 | board 217 : 1 | board 218 : 1 | board 219 : 1 | 
+board 220 : 1 | board 221 : 1 | board 222 : 1 | board 223 : 1 | board 224 : 0 | 
+================================opponent_turn==================================
+board   0 : 0 | board   1 : 0 | board   2 : 0 | board   3 : 0 | board   4 : 0 | board   5 : 0 | board   6 : 0 | board   7 : 0 | board   8 : 0 | board   9 : 0 | 
+board  10 : 0 | board  11 : 0 | board  12 : 0 | board  13 : 0 | board  14 : 0 | board  15 : 0 | board  16 : 1 | board  17 : 7 | board  18 : 7 | board  19 : 1 | 
+board  20 : 1 | board  21 : 1 | board  22 : 1 | board  23 : 1 | board  24 : 1 | board  25 : 1 | board  26 : 1 | board  27 : 1 | board  28 : 1 | board  29 : 1 | 
+board  30 : 0 | board  31 : 1 | board  32 : 7 | board  33 : 1 | board  34 : 1 | board  35 : 1 | board  36 : 1 | board  37 : 1 | board  38 : 1 | board  39 : 1 | 
+board  40 : 1 | board  41 : 1 | board  42 : 1 | board  43 : 1 | board  44 : 1 | board  45 : 0 | board  46 : 1 | board  47 : 1 | board  48 : 1 | board  49 : 1 | 
+board  50 : 1 | board  51 : 1 | board  52 : 1 | board  53 : 1 | board  54 : 1 | board  55 : 1 | board  56 : 1 | board  57 : 1 | board  58 : 1 | board  59 : 1 | 
+board  60 : 0 | board  61 : 1 | board  62 : 1 | board  63 : 1 | board  64 : 1 | board  65 : 1 | board  66 : 1 | board  67 : 1 | board  68 : 1 | board  69 : 1 | 
+board  70 : 1 | board  71 : 1 | board  72 : 1 | board  73 : 1 | board  74 : 0 | board  75 : 0 | board  76 : 1 | board  77 : 7 | board  78 : 7 | board  79 : 7 | 
+board  80 : 1 | board  81 : 1 | board  82 : 1 | board  83 : 1 | board  84 : 1 | board  85 : 1 | board  86 : 1 | board  87 : 1 | board  88 : 1 | board  89 : 1 | 
+board  90 : 0 | board  91 : 1 | board  92 : 7 | board  93 : 1 | board  94 : 7 | board  95 : 1 | board  96 : 1 | board  97 : 1 | board  98 : 1 | board  99 : 1 | 
+board 100 : 1 | board 101 : 1 | board 102 : 1 | board 103 : 1 | board 104 : 1 | board 105 : 0 | board 106 : 2 | board 107 : 1 | board 108 : 1 | board 109 : 7 | 
+board 110 : 1 | board 111 : 1 | board 112 : 1 | board 113 : 1 | board 114 : 1 | board 115 : 1 | board 116 : 1 | board 117 : 1 | board 118 : 1 | board 119 : 1 | 
+board 120 : 0 | board 121 : 1 | board 122 : 1 | board 123 : 1 | board 124 : 7 | board 125 : 1 | board 126 : 1 | board 127 : 1 | board 128 : 1 | board 129 : 1 | 
+board 130 : 1 | board 131 : 1 | board 132 : 1 | board 133 : 1 | board 134 : 1 | board 135 : 0 | board 136 : 1 | board 137 : 7 | board 138 : 7 | board 139 : 1 | 
+board 140 : 1 | board 141 : 1 | board 142 : 1 | board 143 : 1 | board 144 : 1 | board 145 : 1 | board 146 : 1 | board 147 : 1 | board 148 : 1 | board 149 : 1 | 
+board 150 : 0 | board 151 : 2 | board 152 : 1 | board 153 : 1 | board 154 : 1 | board 155 : 1 | board 156 : 1 | board 157 : 1 | board 158 : 1 | board 159 : 1 | 
+board 160 : 1 | board 161 : 1 | board 162 : 1 | board 163 : 1 | board 164 : 1 | board 165 : 0 | board 166 : 1 | board 167 : 1 | board 168 : 1 | board 169 : 1 | 
+board 170 : 1 | board 171 : 1 | board 172 : 1 | board 173 : 1 | board 174 : 1 | board 175 : 1 | board 176 : 1 | board 177 : 1 | board 178 : 1 | board 179 : 1 | 
+board 180 : 0 | board 181 : 1 | board 182 : 1 | board 183 : 1 | board 184 : 1 | board 185 : 1 | board 186 : 1 | board 187 : 1 | board 188 : 1 | board 189 : 1 | 
+board 190 : 1 | board 191 : 1 | board 192 : 1 | board 193 : 1 | board 194 : 1 | board 195 : 0 | board 196 : 1 | board 197 : 1 | board 198 : 2 | board 199 : 1 | 
+board 200 : 1 | board 201 : 1 | board 202 : 1 | board 203 : 1 | board 204 : 1 | board 205 : 1 | board 206 : 1 | board 207 : 1 | board 208 : 1 | board 209 : 1 | 
+board 210 : 0 | board 211 : 1 | board 212 : 1 | board 213 : 1 | board 214 : 1 | board 215 : 0 | board 216 : 0 | board 217 : 0 | board 218 : 0 | board 219 : 0 | 
+board 220 : 0 | board 221 : 0 | board 222 : 0 | board 223 : 0 | board 224 : 0 | 
+
+~~~~~~~~~~~~~~board_evaluations~~~~~~~~~~~~~~~~~
+
+================================my_turn==================================
+board   0 : 0 | board   1 : 0 | board   2 : 0 | board   3 : 0 | board   4 : 0 | board   5 : 0 | board   6 : 0 | board   7 : 0 | board   8 : 0 | board   9 : 0 | 
+board  10 : 0 | board  11 : 0 | board  12 : 0 | board  13 : 0 | board  14 : 0 | board  15 : 0 | board  16 : 3 | board  17 : 3 | board  18 : 2 | board  19 : 1 | 
+board  20 : 3 | board  21 : 3 | board  22 : 3 | board  23 : 3 | board  24 : 3 | board  25 : 3 | board  26 : 3 | board  27 : 3 | board  28 : 3 | board  29 : 3 | 
+board  30 : 0 | board  31 : 3 | board  32 : 3 | board  33 : 1 | board  34 : 1 | board  35 : 3 | board  36 : 3 | board  37 : 3 | board  38 : 3 | board  39 : 3 | 
+board  40 : 3 | board  41 : 3 | board  42 : 3 | board  43 : 3 | board  44 : 3 | board  45 : 0 | board  46 : 3 | board  47 : 1 | board  48 : 1 | board  49 : 1 | 
+board  50 : 3 | board  51 : 3 | board  52 : 1 | board  53 : 3 | board  54 : 3 | board  55 : 3 | board  56 : 3 | board  57 : 3 | board  58 : 3 | board  59 : 3 | 
+board  60 : 0 | board  61 : 1 | board  62 : 1 | board  63 : 1 | board  64 : 1 | board  65 : 3 | board  66 : 3 | board  67 : 3 | board  68 : 3 | board  69 : 3 | 
+board  70 : 3 | board  71 : 3 | board  72 : 3 | board  73 : 3 | board  74 : 3 | board  75 : 0 | board  76 : 3 | board  77 : 3 | board  78 : 3 | board  79 : 1 | 
+board  80 : 3 | board  81 : 3 | board  82 : 3 | board  83 : 3 | board  84 : 3 | board  85 : 3 | board  86 : 3 | board  87 : 3 | board  88 : 3 | board  89 : 0 | 
+board  90 : 0 | board  91 : 3 | board  92 : 3 | board  93 : 1 | board  94 : 1 | board  95 : 3 | board  96 : 3 | board  97 : 3 | board  98 : 3 | board  99 : 3 | 
+board 100 : 3 | board 101 : 3 | board 102 : 3 | board 103 : 3 | board 104 : 0 | board 105 : 0 | board 106 : 3 | board 107 : 1 | board 108 : 1 | board 109 : 1 | 
+board 110 : 3 | board 111 : 3 | board 112 : 3 | board 113 : 3 | board 114 : 3 | board 115 : 3 | board 116 : 3 | board 117 : 3 | board 118 : 3 | board 119 : 0 | 
+board 120 : 0 | board 121 : 1 | board 122 : 1 | board 123 : 1 | board 124 : 1 | board 125 : 3 | board 126 : 3 | board 127 : 3 | board 128 : 3 | board 129 : 3 | 
+board 130 : 3 | board 131 : 3 | board 132 : 3 | board 133 : 3 | board 134 : 0 | board 135 : 0 | board 136 : 3 | board 137 : 3 | board 138 : 1 | board 139 : 1 | 
+board 140 : 3 | board 141 : 3 | board 142 : 3 | board 143 : 3 | board 144 : 3 | board 145 : 3 | board 146 : 3 | board 147 : 3 | board 148 : 3 | board 149 : 0 | 
+board 150 : 0 | board 151 : 3 | board 152 : 1 | board 153 : 1 | board 154 : 1 | board 155 : 3 | board 156 : 3 | board 157 : 3 | board 158 : 3 | board 159 : 3 | 
+board 160 : 3 | board 161 : 3 | board 162 : 3 | board 163 : 3 | board 164 : 0 | board 165 : 0 | board 166 : 1 | board 167 : 1 | board 168 : 1 | board 169 : 1 | 
+board 170 : 3 | board 171 : 3 | board 172 : 3 | board 173 : 3 | board 174 : 3 | board 175 : 3 | board 176 : 3 | board 177 : 3 | board 178 : 3 | board 179 : 0 | 
+board 180 : 0 | board 181 : 3 | board 182 : 1 | board 183 : 1 | board 184 : 1 | board 185 : 3 | board 186 : 3 | board 187 : 3 | board 188 : 3 | board 189 : 3 | 
+board 190 : 3 | board 191 : 3 | board 192 : 3 | board 193 : 3 | board 194 : 0 | board 195 : 0 | board 196 : 1 | board 197 : 1 | board 198 : 1 | board 199 : 1 | 
+board 200 : 3 | board 201 : 3 | board 202 : 3 | board 203 : 3 | board 204 : 3 | board 205 : 3 | board 206 : 3 | board 207 : 3 | board 208 : 3 | board 209 : 0 | 
+board 210 : 0 | board 211 : 1 | board 212 : 1 | board 213 : 1 | board 214 : 0 | board 215 : 3 | board 216 : 3 | board 217 : 3 | board 218 : 3 | board 219 : 3 | 
+board 220 : 3 | board 221 : 3 | board 222 : 3 | board 223 : 3 | board 224 : 0 | 
+================================opponent_turn==================================
+board   0 : 0 | board   1 : 0 | board   2 : 0 | board   3 : 0 | board   4 : 0 | board   5 : 0 | board   6 : 0 | board   7 : 0 | board   8 : 0 | board   9 : 0 | 
+board  10 : 0 | board  11 : 0 | board  12 : 0 | board  13 : 0 | board  14 : 0 | board  15 : 0 | board  16 : 3 | board  17 : 3 | board  18 : 3 | board  19 : 2 | 
+board  20 : 3 | board  21 : 3 | board  22 : 3 | board  23 : 2 | board  24 : 3 | board  25 : 3 | board  26 : 2 | board  27 : 3 | board  28 : 2 | board  29 : 2 | 
+board  30 : 0 | board  31 : 3 | board  32 : 3 | board  33 : 2 | board  34 : 2 | board  35 : 3 | board  36 : 3 | board  37 : 2 | board  38 : 2 | board  39 : 3 | 
+board  40 : 2 | board  41 : 2 | board  42 : 2 | board  43 : 2 | board  44 : 2 | board  45 : 0 | board  46 : 1 | board  47 : 2 | board  48 : 2 | board  49 : 2 | 
+board  50 : 3 | board  51 : 2 | board  52 : 2 | board  53 : 2 | board  54 : 2 | board  55 : 2 | board  56 : 2 | board  57 : 2 | board  58 : 2 | board  59 : 2 | 
+board  60 : 0 | board  61 : 2 | board  62 : 2 | board  63 : 2 | board  64 : 2 | board  65 : 2 | board  66 : 2 | board  67 : 2 | board  68 : 2 | board  69 : 2 | 
+board  70 : 2 | board  71 : 2 | board  72 : 2 | board  73 : 2 | board  74 : 0 | board  75 : 0 | board  76 : 3 | board  77 : 3 | board  78 : 3 | board  79 : 3 | 
+board  80 : 3 | board  81 : 3 | board  82 : 3 | board  83 : 3 | board  84 : 3 | board  85 : 3 | board  86 : 3 | board  87 : 3 | board  88 : 3 | board  89 : 3 | 
+board  90 : 0 | board  91 : 3 | board  92 : 3 | board  93 : 3 | board  94 : 3 | board  95 : 3 | board  96 : 3 | board  97 : 3 | board  98 : 3 | board  99 : 3 | 
+board 100 : 3 | board 101 : 3 | board 102 : 3 | board 103 : 3 | board 104 : 3 | board 105 : 0 | board 106 : 3 | board 107 : 3 | board 108 : 2 | board 109 : 3 | 
+board 110 : 3 | board 111 : 3 | board 112 : 3 | board 113 : 3 | board 114 : 3 | board 115 : 3 | board 116 : 3 | board 117 : 3 | board 118 : 3 | board 119 : 3 | 
+board 120 : 0 | board 121 : 3 | board 122 : 3 | board 123 : 3 | board 124 : 3 | board 125 : 3 | board 126 : 3 | board 127 : 3 | board 128 : 3 | board 129 : 3 | 
+board 130 : 3 | board 131 : 3 | board 132 : 3 | board 133 : 3 | board 134 : 3 | board 135 : 0 | board 136 : 3 | board 137 : 3 | board 138 : 3 | board 139 : 3 | 
+board 140 : 3 | board 141 : 3 | board 142 : 3 | board 143 : 3 | board 144 : 3 | board 145 : 3 | board 146 : 3 | board 147 : 3 | board 148 : 3 | board 149 : 3 | 
+board 150 : 0 | board 151 : 3 | board 152 : 3 | board 153 : 3 | board 154 : 3 | board 155 : 3 | board 156 : 3 | board 157 : 3 | board 158 : 3 | board 159 : 3 | 
+board 160 : 3 | board 161 : 3 | board 162 : 3 | board 163 : 3 | board 164 : 3 | board 165 : 0 | board 166 : 3 | board 167 : 3 | board 168 : 3 | board 169 : 3 | 
+board 170 : 3 | board 171 : 3 | board 172 : 3 | board 173 : 3 | board 174 : 3 | board 175 : 3 | board 176 : 3 | board 177 : 3 | board 178 : 3 | board 179 : 3 | 
+board 180 : 0 | board 181 : 3 | board 182 : 3 | board 183 : 3 | board 184 : 3 | board 185 : 3 | board 186 : 3 | board 187 : 3 | board 188 : 3 | board 189 : 3 | 
+board 190 : 3 | board 191 : 3 | board 192 : 3 | board 193 : 3 | board 194 : 3 | board 195 : 0 | board 196 : 3 | board 197 : 3 | board 198 : 3 | board 199 : 3 | 
+board 200 : 3 | board 201 : 3 | board 202 : 3 | board 203 : 3 | board 204 : 3 | board 205 : 3 | board 206 : 3 | board 207 : 3 | board 208 : 3 | board 209 : 3 | 
+board 210 : 0 | board 211 : 3 | board 212 : 3 | board 213 : 3 | board 214 : 3 | board 215 : 0 | board 216 : 0 | board 217 : 0 | board 218 : 0 | board 219 : 0 | 
+board 220 : 0 | board 221 : 0 | board 222 : 0 | board 223 : 0 | board 224 : 0 | 
+
+~~~~~~~~~~~~~~board_log~~~~~~~~~~~~~~~~~
+
+================================my_turn==================================
+board   0 : 0 | board   1 : 0 | board   2 : 0 | board   3 : 0 | board   4 : 0 | board   5 : 0 | board   6 : 0 | board   7 : 0 | board   8 : 0 | board   9 : 0 | 
+board  10 : 0 | board  11 : 0 | board  12 : 0 | board  13 : 0 | board  14 : 0 | board  15 : 0 | board  16 : 0 | board  17 : 0 | board  18 : 0 | board  19 : 0 | 
+board  20 : 0 | board  21 : 0 | board  22 : 0 | board  23 : 0 | board  24 : 0 | board  25 : 0 | board  26 : 0 | board  27 : 0 | board  28 : 0 | board  29 : 0 | 
+board  30 : 0 | board  31 : 0 | board  32 : 0 | board  33 : 0 | board  34 : 0 | board  35 : 0 | board  36 : 0 | board  37 : 0 | board  38 : 0 | board  39 : 0 | 
+board  40 : 0 | board  41 : 0 | board  42 : 0 | board  43 : 0 | board  44 : 0 | board  45 : 0 | board  46 : 0 | board  47 : 0 | board  48 : 0 | board  49 : 0 | 
+board  50 : 0 | board  51 : 0 | board  52 : 0 | board  53 : 0 | board  54 : 0 | board  55 : 0 | board  56 : 0 | board  57 : 0 | board  58 : 0 | board  59 : 0 | 
+board  60 : 0 | board  61 : 0 | board  62 : 0 | board  63 : 0 | board  64 : 0 | board  65 : 0 | board  66 : 0 | board  67 : 0 | board  68 : 0 | board  69 : 0 | 
+board  70 : 0 | board  71 : 0 | board  72 : 0 | board  73 : 0 | board  74 : 0 | board  75 : 0 | board  76 : 0 | board  77 : 0 | board  78 : 0 | board  79 : 0 | 
+board  80 : 0 | board  81 : 0 | board  82 : 0 | board  83 : 0 | board  84 : 0 | board  85 : 0 | board  86 : 0 | board  87 : 0 | board  88 : 0 | board  89 : 0 | 
+board  90 : 0 | board  91 : 0 | board  92 : 0 | board  93 : 0 | board  94 : 0 | board  95 : 0 | board  96 : 0 | board  97 : 0 | board  98 : 0 | board  99 : 0 | 
+board 100 : 0 | board 101 : 0 | board 102 : 0 | board 103 : 0 | board 104 : 0 | board 105 : 0 | board 106 : 0 | board 107 : 0 | board 108 : 0 | board 109 : 0 | 
+board 110 : 0 | board 111 : 0 | board 112 : 0 | board 113 : 0 | board 114 : 0 | board 115 : 0 | board 116 : 0 | board 117 : 0 | board 118 : 0 | board 119 : 0 | 
+board 120 : 0 | board 121 : 0 | board 122 : 0 | board 123 : 0 | board 124 : 0 | board 125 : 0 | board 126 : 0 | board 127 : 0 | board 128 : 0 | board 129 : 0 | 
+board 130 : 0 | board 131 : 0 | board 132 : 0 | board 133 : 0 | board 134 : 0 | board 135 : 0 | board 136 : 0 | board 137 : 0 | board 138 : 0 | board 139 : 0 | 
+board 140 : 0 | board 141 : 0 | board 142 : 0 | board 143 : 0 | board 144 : 0 | board 145 : 0 | board 146 : 0 | board 147 : 0 | board 148 : 0 | board 149 : 0 | 
+board 150 : 0 | board 151 : 0 | board 152 : 0 | board 153 : 0 | board 154 : 0 | board 155 : 0 | board 156 : 0 | board 157 : 0 | board 158 : 0 | board 159 : 0 | 
+board 160 : 0 | board 161 : 0 | board 162 : 0 | board 163 : 0 | board 164 : 0 | board 165 : 0 | board 166 : 0 | board 167 : 0 | board 168 : 0 | board 169 : 0 | 
+board 170 : 0 | board 171 : 0 | board 172 : 0 | board 173 : 0 | board 174 : 0 | board 175 : 0 | board 176 : 0 | board 177 : 0 | board 178 : 0 | board 179 : 0 | 
+board 180 : 0 | board 181 : 0 | board 182 : 0 | board 183 : 0 | board 184 : 0 | board 185 : 0 | board 186 : 0 | board 187 : 0 | board 188 : 0 | board 189 : 0 | 
+board 190 : 0 | board 191 : 0 | board 192 : 0 | board 193 : 0 | board 194 : 0 | board 195 : 0 | board 196 : 0 | board 197 : 0 | board 198 : 0 | board 199 : 0 | 
+board 200 : 0 | board 201 : 0 | board 202 : 0 | board 203 : 0 | board 204 : 0 | board 205 : 0 | board 206 : 0 | board 207 : 0 | board 208 : 0 | board 209 : 0 | 
+board 210 : 0 | board 211 : 0 | board 212 : 0 | board 213 : 0 | board 214 : 0 | board 215 : 0 | board 216 : 0 | board 217 : 0 | board 218 : 0 | board 219 : 0 | 
+board 220 : 0 | board 221 : 0 | board 222 : 0 | board 223 : 0 | board 224 : 0 | 
+================================opponent_turn==================================
+board   0 : 0 | board   1 : 0 | board   2 : 0 | board   3 : 0 | board   4 : 0 | board   5 : 0 | board   6 : 0 | board   7 : 0 | board   8 : 0 | board   9 : 0 | 
+board  10 : 0 | board  11 : 0 | board  12 : 0 | board  13 : 0 | board  14 : 0 | board  15 : 0 | board  16 : 0 | board  17 : 0 | board  18 : 0 | board  19 : 0 | 
+board  20 : 0 | board  21 : 0 | board  22 : 0 | board  23 : 0 | board  24 : 0 | board  25 : 0 | board  26 : 0 | board  27 : 0 | board  28 : 0 | board  29 : 0 | 
+board  30 : 0 | board  31 : 0 | board  32 : 0 | board  33 : 0 | board  34 : 0 | board  35 : 0 | board  36 : 0 | board  37 : 0 | board  38 : 0 | board  39 : 0 | 
+board  40 : 0 | board  41 : 0 | board  42 : 0 | board  43 : 0 | board  44 : 0 | board  45 : 0 | board  46 : 0 | board  47 : 0 | board  48 : 0 | board  49 : 0 | 
+board  50 : 0 | board  51 : 0 | board  52 : 0 | board  53 : 0 | board  54 : 0 | board  55 : 0 | board  56 : 0 | board  57 : 0 | board  58 : 0 | board  59 : 0 | 
+board  60 : 0 | board  61 : 0 | board  62 : 0 | board  63 : 0 | board  64 : 0 | board  65 : 0 | board  66 : 0 | board  67 : 0 | board  68 : 0 | board  69 : 0 | 
+board  70 : 0 | board  71 : 0 | board  72 : 0 | board  73 : 0 | board  74 : 0 | board  75 : 0 | board  76 : 0 | board  77 : 0 | board  78 : 0 | board  79 : 0 | 
+board  80 : 0 | board  81 : 0 | board  82 : 0 | board  83 : 0 | board  84 : 0 | board  85 : 0 | board  86 : 0 | board  87 : 0 | board  88 : 0 | board  89 : 0 | 
+board  90 : 0 | board  91 : 0 | board  92 : 0 | board  93 : 0 | board  94 : 0 | board  95 : 0 | board  96 : 0 | board  97 : 0 | board  98 : 0 | board  99 : 0 | 
+board 100 : 0 | board 101 : 0 | board 102 : 0 | board 103 : 0 | board 104 : 0 | board 105 : 0 | board 106 : 0 | board 107 : 0 | board 108 : 0 | board 109 : 0 | 
+board 110 : 0 | board 111 : 0 | board 112 : 0 | board 113 : 0 | board 114 : 0 | board 115 : 0 | board 116 : 0 | board 117 : 0 | board 118 : 0 | board 119 : 0 | 
+board 120 : 0 | board 121 : 0 | board 122 : 0 | board 123 : 0 | board 124 : 0 | board 125 : 0 | board 126 : 0 | board 127 : 0 | board 128 : 0 | board 129 : 0 | 
+board 130 : 0 | board 131 : 0 | board 132 : 0 | board 133 : 0 | board 134 : 0 | board 135 : 0 | board 136 : 0 | board 137 : 0 | board 138 : 0 | board 139 : 0 | 
+board 140 : 0 | board 141 : 0 | board 142 : 0 | board 143 : 0 | board 144 : 0 | board 145 : 0 | board 146 : 0 | board 147 : 0 | board 148 : 0 | board 149 : 0 | 
+board 150 : 0 | board 151 : 0 | board 152 : 0 | board 153 : 0 | board 154 : 0 | board 155 : 0 | board 156 : 0 | board 157 : 0 | board 158 : 0 | board 159 : 0 | 
+board 160 : 0 | board 161 : 0 | board 162 : 0 | board 163 : 0 | board 164 : 0 | board 165 : 0 | board 166 : 0 | board 167 : 0 | board 168 : 0 | board 169 : 0 | 
+board 170 : 0 | board 171 : 0 | board 172 : 0 | board 173 : 0 | board 174 : 0 | board 175 : 0 | board 176 : 0 | board 177 : 0 | board 178 : 0 | board 179 : 0 | 
+board 180 : 0 | board 181 : 0 | board 182 : 0 | board 183 : 0 | board 184 : 0 | board 185 : 0 | board 186 : 0 | board 187 : 0 | board 188 : 0 | board 189 : 0 | 
+board 190 : 0 | board 191 : 0 | board 192 : 0 | board 193 : 0 | board 194 : 0 | board 195 : 0 | board 196 : 0 | board 197 : 0 | board 198 : 0 | board 199 : 0 | 
+board 200 : 0 | board 201 : 0 | board 202 : 0 | board 203 : 0 | board 204 : 0 | board 205 : 0 | board 206 : 0 | board 207 : 0 | board 208 : 0 | board 209 : 0 | 
+board 210 : 0 | board 211 : 0 | board 212 : 0 | board 213 : 0 | board 214 : 0 | board 215 : 0 | board 216 : 0 | board 217 : 0 | board 218 : 0 | board 219 : 0 | 
+board 220 : 0 | board 221 : 0 | board 222 : 0 | board 223 : 0 | board 224 : 0 | 
