@@ -154,10 +154,104 @@ void print_board(unsigned int board){
   printf("===================================\n");
 }
 
+/*引数の配列の末尾に要素を追加する*/
+void add_elem(unsigned int new_element, unsigned int* arr_len, unsigned int* arr){
+  arr[(*arr_len)] = new_element;
+  (*arr_len) ++;
+  return;
+}
+
+/*行動の選択肢のリスト、行動インデックス配列を更新する*/
+void action_list(unsigned int board, unsigned int* arr_len , unsigned int* action_arr){
+  //unsigned int my_index = my_hands_index(board); // 自分の両手の情報
+  //unsigned int opponent_index = opponent_hands_index(board); // 相手の両手の情報
+
+  unsigned int my_s = my_small_finger(board); // 自分の小さい指の情報
+  unsigned int my_b = my_big_finger(board); // 自分の大きい指の情報
+  unsigned int opp_s = opponent_small_finger(board); // 相手の小さい指の情報
+  unsigned int opp_b = opponent_big_finger(board); // 相手の大きい指の情報
+  
+  (*arr_len) = 0; // (*arr_len) を初期化
+
+  /*自分の両手の情報が(0,0) or 相手の両手の情報が(0,0) のとき、行動インデックス 0 を返す*/
+  if(my_b == 0 || opp_b == 0){
+    add_elem(no_action,arr_len,action_arr);
+    return;
+  }
+
+  /* 行動インデックス配列に行動インデックス 1 を入れる */
+  add_elem(attack_b_to_b,arr_len,action_arr);
+
+  /* ( 相手の小さい指が 1 以上 && 相手の両手の指が一緒じゃない ) のとき
+   * 自分の大きい指で相手の小さい指を攻撃する行動インデックス 2 を行動インデックス配列に入れる */
+  if( ( opp_s >= 1 ) && (opp_s != opp_b) ){
+    add_elem(attack_b_to_s,arr_len,action_arr);
+  }
+
+  /* ( 自分の小さい指が 1 以上 && 自分の両手の指が一緒じゃない ) のとき
+   * 自分の小さい指で相手の大きい指を攻撃する行動インデックス 3 を行動インデックス配列に入れる */
+  if( ( my_s >= 1 ) && ( my_s != my_b ) ){
+    add_elem(attack_s_to_b,arr_len,action_arr);
+  }
+
+  /* ( ( 自分の小さい指が 1 以上 && 自分の両手の指が一緒じゃない ) && ( 相手の小さい指が 1 以上 && 相手の両手の指が一緒じゃない ) ) のとき
+   * 自分の小さい指で相手の小さい指を攻撃する行動インデックス 4 を行動インデックス配列に入れる */
+  if( ( (my_s >= 1) && (my_s != my_b) ) && ( (opp_s >= 1) && (opp_s != opp_b) ) ){
+    add_elem(atttack_s_to_s,arr_len,action_arr);
+  }
+
+  /* 自分の小さい指が 1 以上のとき
+   * 自分の大きい指で自分の小さい指を攻撃する行動インデックス 5 を入れ、
+   * ( 自分の小さい指が 1 以上 && 自分の両手の指が一緒じゃない ) とき
+   * 自分の大きい指で自分の小さい指を攻撃する行動インデックス 6 の二つを　行動インデックス配列に入れる */
+  if(my_s >= 1){
+    add_elem(attack_b_to_my_s,arr_len,action_arr);
+    if(my_s != my_b)add_elem(attack_s_to_my_b,arr_len,action_arr);
+  }
+
+  /* ( (自分の小さい指が 0 && 自分の大きい指が 2 以上) or (自分の指が両方とも 2 以上 && 自分の両方の指の合計が 5 以下) ) のとき
+   * 自分の小さい指が1になるように分割する行動インデックス 7 を行動インデックス配列に入れる */
+  /* 盤面の移動例
+   * (0,2)->(1,1)
+   * (0,3)->(1,2)
+   * (0,4)->(1,3)
+   * (2,2)->(1,3)
+   * (2,3)->(1,4)
+  */
+  if( (my_s == 0 && my_b >= 2) || (my_s >= 2 && ((my_s + my_b) <= 5) ) ){
+    add_elem(devide_s1,arr_len,action_arr);
+  }
+
+  /* ( (自分の小さい指が 0 && 自分の大きい指が 4) or (自分の小さい指が 1 && 自分の大きい指が 3 以上) or (自分の小さい指が 3 && 自分の大きい指が 3) ) のとき
+   * 自分の小さい指が2になるように分割する行動インデックス 8 を行動インデックス配列に入れる */
+  /* 盤面の移動例
+   * (0,4)->(2,2)
+   * (1,3)->(2,2)
+   * (1,4)->(2,3)
+   * (3,3)->(2,4)
+  */
+  if((my_s == 0 && my_b == 4) || ( (my_s == 1 && my_b >= 3) || (my_s == 3 && my_b == 3) ) ){
+    add_elem(devide_s2,arr_len,action_arr);
+  }
+
+  /* 自分の小さい指が
+   * 自分の小さい指が3になるように分割する行動インデックス 9 を行動インデックス配列に入れる */
+  /* 盤面の移動例
+   * (2,4)->(3,3)
+  */
+  if(my_s == 2 && my_b == 4){
+    add_elem(devide_s3,arr_len,action_arr);
+  }
+
+  return;  
+}
+
 int main(void){
-  int action = 0;
-  int turn_num = 0;
-  int board = 80;
+  unsigned int action = 0;
+  unsigned int turn_num = 0;
+  unsigned int board = 80;
+  unsigned int action_list_arr[10];
+  unsigned int action_list_arr_len;
   printf("Please input (f or d),(board number).\n");
   char c;
   while(1){
@@ -172,8 +266,17 @@ int main(void){
     while(my_big_finger(board) != 0 && opponent_big_finger(board) != 0){
       /*ターンを進める*/
       turn_num++;
-      if(turn_num % 2 == 1) printf("next your turn. please input action.\n");
-      else if(turn_num % 2 == 0) printf("next cpu turn. please input action.\n");
+      if(turn_num % 2 == 1){
+        printf("next your turn. please input action.\n");
+        action_list(board,&(action_list_arr_len),action_list_arr);
+      }
+      else if(turn_num % 2 == 0){ 
+        printf("next cpu turn. please input action.\n");
+        action_list(reverse_board(board),&(action_list_arr_len),action_list_arr);
+      }
+      printf("now action_list : [");
+      for(int i=0; i<action_list_arr_len; i++) printf("%d, ", action_list_arr[i]);
+      printf("]\n");
       scanf("%d",&action);
       //printf("read %d.\n",action);
       //if(/*盤面に対して打てる手が入力されていなかった場合*/){}
@@ -192,8 +295,17 @@ int main(void){
     while(my_big_finger(board) != 0 && opponent_big_finger(board) != 0){
       /*ターンを進める*/
       turn_num++;
-      if(turn_num % 2 == 0) printf("next your turn. please input action.\n");
-      else if(turn_num % 2 == 1) printf("next cpu turn. please input action.\n");
+      if(turn_num % 2 == 0){
+        printf("next your turn. please input action.\n");
+        action_list(board,&(action_list_arr_len),action_list_arr);
+      }
+      else if(turn_num % 2 == 1){ 
+        printf("next cpu turn. please input action.\n");
+        action_list(reverse_board(board),&(action_list_arr_len),action_list_arr);
+      }
+      printf("now action_list : [");
+      for(int i=0; i<action_list_arr_len; i++) printf("%d, ", action_list_arr[i]);
+      printf("]\n");
       scanf("%d",&action);
       //printf("read %d.\n",action);
       if(turn_num % 2 == 0) board = next_board(board, action);
