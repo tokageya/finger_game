@@ -89,11 +89,6 @@
 #define OPPONENT_WIN 2
 #define DRAW 3
 
-/*ループ判定で使う Trun 構造体を作成*/
-typedef struct _Turn{
-  unsigned int user;
-  unsigned int board;
-} Turn;
 
 unsigned int me_count=0;
 unsigned int opponent_count=0;
@@ -314,30 +309,6 @@ unsigned int next_board(unsigned int now_board, unsigned int action){
 
 }
 
-/*引数の盤面a_boardが、引数の盤面のログに存在するかどうかを確認する*/
-/*ループしていたら 1 を返す*/
-unsigned int loop_check(unsigned int a_board, unsigned int user, unsigned int board_log_len, Turn* board_log){
-  //printf("now        a_board = %2d | user = %2d\n----------------------\n",a_board,user);
-  for(unsigned int turn=0; turn < board_log_len; turn++){
-    //printf("turn=%2d , board_log[%2d].board = %2d | board_log[%2d].user=%2d\n",turn,turn,board_log[turn].board,turn,board_log[turn].user);
-    if(a_board == board_log[turn].board && user == board_log[turn].user) return 1;
-  }
-  //printf("\n^^^^^^^^^^^^^^^^^\n");
-  return 0;
-}
-
-/*引数の盤面のログからループしていないかどうかを確認する*/
-/*ループしていたら 1 を返す*/
-unsigned int loop_check2(unsigned int board_log_len, unsigned int* board_log){
-  for(unsigned int turn = 0; turn < board_log_len; turn ++){
-    unsigned int a_board = board_log[turn];
-    for(unsigned int i = turn+1; i < board_log_len; i++){
-      if(a_board == board_log[i]) return 1;
-    }
-  }
-  return 0;
-}
-
 
 /*盤面ハッシュを一時的に相手視点に変えるための関数*/
 unsigned int reverse_board(unsigned int board){
@@ -370,11 +341,7 @@ unsigned int select_evaluation(unsigned int user, unsigned int* best_behavior, u
         max_evaluation = local_board_evaluations[i];
         (*best_behavior) = action_arr[i];
         return max_evaluation;
-      }/*
-      else if(local_board_evaluations[i] == LOSE){
-        max_evaluation = local_board_evaluations[i];
-        (*best_behavior) = action_arr[i];
-      }*/
+      }
       else if(local_board_evaluations[i] == DRAW){
         max_evaluation = local_board_evaluations[i];
         (*best_behavior) = action_arr[i];
@@ -385,11 +352,6 @@ unsigned int select_evaluation(unsigned int user, unsigned int* best_behavior, u
   else if(user == OPPONENT_TURN){
     unsigned int min_evaluation = local_board_evaluations[0];
     for(unsigned int i=0; i<action_arr_len; i++){
-      /*if( local_board_evaluations[i] == OPPONENT_LOSE ){
-        min_evaluation = local_board_evaluations[i];
-        (*best_behavior) = action_arr[i];
-      }
-      else */
       if( local_board_evaluations[i] == OPPONENT_WIN ){
         min_evaluation = local_board_evaluations[i];
         (*best_behavior) = action_arr[i];
@@ -411,6 +373,8 @@ unsigned int select_evaluation(unsigned int user, unsigned int* best_behavior, u
 
 unsigned int opponent(unsigned int min_max[ALL_USER_NUM][BOARD_NUM],unsigned int board, unsigned int board_evaluations[ALL_USER_NUM][BOARD_NUM], unsigned int board_log[ALL_USER_NUM][BOARD_NUM]);
 
+
+
 /*自分のターンのときに指す方法を探る。*/
 /*自分の番の時は、その局面の次に出現するすべての局面のうち最も良い評価の手を打つことができるので、
  *次に出現するすべての局面の評価値の最大値を局面の評価値にすればよい。*/
@@ -431,7 +395,7 @@ unsigned int me(unsigned int min_max[ALL_USER_NUM][BOARD_NUM],unsigned int board
     return LOSE;
   }
   /*引数の盤面が現れている場合、ループ情報を返す*/
-  else if(/*board_evaluations[MY_TURN][board] == 0 && */board_log[MY_TURN][board] == 1 ){
+  else if(board_log[MY_TURN][board] == 1 ){
     me_count--;
     if(min_max[MY_TURN][board] != 0) {
       return board_evaluations[MY_TURN][board];
@@ -457,7 +421,6 @@ unsigned int me(unsigned int min_max[ALL_USER_NUM][BOARD_NUM],unsigned int board
 
 
   
-  //printf("in me関数\n");
   unsigned int flag = 0;
   unsigned int win_i = 0;
   for(int i=0; i<local_board_evaluations_len; i++){
@@ -505,7 +468,7 @@ unsigned int opponent(unsigned int min_max[ALL_USER_NUM][BOARD_NUM],unsigned int
     return OPPONENT_LOSE;
   }
   /*引数の盤面が現れている場合、ループ情報を返す*/
-  else if(/*board_evaluations[OPPONENT_TURN][board] == 0 &&*/ board_log[OPPONENT_TURN][board] == 1){
+  else if(board_log[OPPONENT_TURN][board] == 1){
     opponent_count--;
     if(min_max[OPPONENT_TURN][board] != 0) {
       return board_evaluations[OPPONENT_TURN][board];
